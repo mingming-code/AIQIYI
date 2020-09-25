@@ -1,0 +1,376 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* 声明混合清浮动 */
+/* 头部上方 */
+.head-top {
+  background: #f7f7f7;
+}
+.head-top .head-top-area {
+  width: 1200px;
+  margin: 0 auto;
+  height: 31px;
+  line-height: 32px;
+}
+
+/* 头部下面 */
+.head-bottom-area {
+  width: 1200px;
+  margin: 0 auto;
+  height: 97px;
+  padding-top: 30px;
+}
+.head-bottom-area h1 {
+  float: left;
+}
+
+/* 搜索框 */
+.search {
+  width: 510px;
+  margin-left: 155px;
+  float: left;
+}
+.search p {
+  width: 100%;
+  height: 34px;
+  border: 1px solid #ee394b;
+  font-size: 12px;
+  color: #999999;
+}
+.search p input {
+  border: 0;
+  outline: none;
+  width: 316px;
+  height: 34px;
+  margin: 0 5px;
+}
+.search p button {
+  border: 0;
+  outline: none;
+  width: 100px;
+  height: 34px;
+  background: #ee394b;
+  float: right;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  line-height: 34px;
+}
+.search div {
+  height: 14px;
+  line-height: 14px;
+  padding-top: 10px;
+  color: #c7c7c7;
+  font-size: 12px;
+}
+.search div span {
+  background: #e5e5e5;
+  width: 1px;
+  height: 8px;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+/* 头部右边轮播广告 */
+.head-bottom ul {
+  float: right;
+  padding-right: 15px;
+}
+.head-bottom ul img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 10px;
+}
+.head-bottom ul div {
+  float: left;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.head-bottom ul div p {
+  line-height: 23px;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.head-bottom ul div span {
+  color: #666;
+}
+
+.head-btn {
+  float: right;
+  margin: 31px 0 0 10px;
+  width: 39px;
+  height: 19px;
+  background: url("http://pic0.iqiyipic.com/common/20150714/arrow2.gif");
+}
+.head-btn span {
+  float: left;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+}
+
+/* 导航栏 */
+nav ul {
+  background: #ee394b;
+  height: 40px;
+  line-height: 40px;
+}
+nav ul li {
+  float: left;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/*  轮播图 */
+.banner {
+  position: relative;
+}
+
+.banner ol {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+}
+.banner ol li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  float: left;
+  margin: 0 6px;
+  text-indent: -9999px;
+}
+
+.banner ul li {
+  display: none;
+}
+.banner ul li a {
+  display: block;
+  height: 400px;
+  background: url("http://pic0.iqiyipic.com/common/20200304/512956b04fe9447db308928593a5ae93.jpg") no-repeat center center;
+}
+
+.banner li:nth-child(2) a {
+  background-image: url("http://pic0.iqiyipic.com/common/20200318/c36d469339ba4996af71e7fc8406c86d.jpg");
+}
+
+.banner li:nth-child(3) a {
+  background-image: url("http://pic2.iqiyipic.com/common/20200219/03222235322145a4ac10076b1bbb105b.jpg");
+}
+
+.banner li:nth-child(4) a {
+  background-image: url("http://pic3.iqiyipic.com/common/20200218/5b0d6aa4382f4cfaa61f592a5b078fbb.jpg");
+}
+
+/* 广告图 */
+.banner1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.ad {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* 每日精选 */
+.daily {
+  margin-top: 40px;
+}
+.daily .main {
+  width: 1200px;
+  margin: 0 auto;
+}
+.daily .main .main-top {
+  height: 36px;
+  line-height: 36px;
+  margin: 15px 0;
+  background: paleturquoise;
+}
+.daily .main .main-top .main-top-left {
+  float: left;
+}
+.daily .main .main-top .main-top-right {
+  float: right;
+}
+.daily .main .main-goods {
+  background: blueviolet;
+  height: 515px;
+}
+
+/* 今日特卖 */
+.main-list::after {
+  content: "";
+  height: 0;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
+.main-list .main-list-left {
+  float: left;
+}
+.main-list .main-list-left ul {
+  width: 840px;
+  height: 600px;
+  background: chartreuse;
+}
+.main-list .main-list-right {
+  float: right;
+  height: 300px;
+  width: 340px;
+  background: #f10b6b;
+}
+
+.logolist ul {
+  overflow: hidden;
+  height: 239px;
+  position: relative;
+  border: 1px solid #e5e5e5;
+}
+.logolist ul li {
+  width: 1200px;
+  overflow: hidden;
+  margin-left: -1px;
+}
+.logolist ul div {
+  float: left;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+  width: 119px;
+  height: 120px;
+  margin: -1px 0 0 -1px;
+}
+
+footer {
+  width: 100%;
+  background: #fafafa;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding-top: 34px;
+}
+footer .foot {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 12px;
+}
+footer .foot .circle {
+  display: flex;
+  justify-content: space-around;
+}
+footer .foot .circle .img {
+  float: left;
+}
+footer .foot .circle .mess {
+  color: #777;
+  font-size: 12px;
+  float: left;
+  margin-left: 18px;
+  margin-top: 15px;
+}
+footer .foot .code {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 34px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+footer .foot .code::after {
+  content: "";
+  height: 0;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
+footer .float {
+  float: left;
+}
+footer .float .codeleft {
+  float: left;
+}
+footer .float .codeleft img {
+  width: 120px;
+  height: 120px;
+}
+footer .float .messright {
+  float: left;
+  width: 270px;
+  margin-left: 10px;
+  font-size: 12px;
+}
+footer .float .messright h1 {
+  color: #333;
+  font-size: 22px;
+  padding-bottom: 5px;
+}
+footer .float .messright p {
+  color: #666;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.foot-bottom {
+  padding-bottom: 36px;
+  background: #f5f5f5;
+}
+.foot-bottom .contain {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 12px;
+  text-decoration: none;
+}
+.foot-bottom .contain .contain-top {
+  height: 120px;
+}
+.foot-bottom .contain .footnav {
+  text-align: center;
+  padding: 5px 0;
+}
+.foot-bottom .contain .footnav a {
+  text-decoration: none;
+  color: #333;
+}
+.foot-bottom .contain .footnav span {
+  margin: 0 3px 0 7px;
+  color: #333;
+}
+.foot-bottom .contain .report {
+  text-align: center;
+  padding: 5px 0;
+}
+.foot-bottom .contain .report a {
+  color: #666;
+  text-decoration: none;
+}
+.foot-bottom .contain .report .ml30 {
+  margin-left: 30px;
+}
+.foot-bottom .contain .copyright {
+  text-align: center;
+  padding: 5px 0;
+  color: #777;
+}
+.foot-bottom .contain .copyright a {
+  color: #777;
+  text-decoration: none;
+}
+.foot-bottom .contain .copyright a:hover {
+  color: red;
+}
+
+/*# sourceMappingURL=index.css.map */
