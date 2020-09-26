@@ -7,8 +7,16 @@ $typeArea :1200px;
     padding: 0;
 }
 
+body {
+    min-width: 1200px;
+}
+
 li {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* 声明混合清浮动 */
@@ -21,17 +29,198 @@ li {
     clear: both;
 }
 
+.line {
+    background: #e5e5e5;
+    width: 1px;
+    height: 8px;
+    display: inline-block;
+    margin: 0 8px;
+}
+
+header {
+    .floatline {
+        float: left;
+        margin: 10px 0;
+    }
+}
+
 /* 头部上方 */
 .head-top {
     background: #f7f7f7;
+    font-size: 12px;
+    color: #999;
+    border-bottom: 1px solid #e7e7e7;
 
     .head-top-area {
         width: $typeArea;
         margin: 0 auto;
-        height: 31px;
+        height: 32px;
         line-height: 32px;
+
+        a {
+            color: #999;
+        }
+
     }
+
+    .left {
+        float: left;
+
+        li {
+            float: left;
+            padding-right: 20px;
+
+            a:hover {
+                color: $color;
+            }
+        }
+    }
+
+    .right {
+        float: right;
+
+
+        li {
+            float: left;
+        }
+
+        .first {
+            padding-left: 20px;
+        }
+
+        .second {
+            margin: 0 20px;
+
+            span {
+                color: #999;
+                cursor: pointer;
+            }
+        }
+
+        .second:hover {
+            span {
+                color: $color;
+            }
+        }
+
+        a span {
+            color: $color;
+            font-weight: bold;
+        }
+
+        i {
+            display: inline-block;
+        }
+
+
+        .topNavCar {
+            width: 15px;
+            height: 13px;
+            margin-top: 2px;
+            background-position: -135px 1px;
+        }
+
+        .topNav_icon1 {
+            width: 10px;
+            height: 15px;
+        }
+
+        .topNav_icon2 {
+            width: 12px;
+            height: 13px;
+        }
+
+        .topNav_icon3 {
+            width: 5px;
+            height: 3px;
+            margin-left: 5px;
+        }
+
+        .topNav_icon1,
+        .topNav_icon2,
+        .topNav_icon3,
+        .topNavCar {
+            background-image: url(http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/topMenu_redicon.png);
+            background-repeat: no-repeat;
+        }
+
+        .myOrder_icon {
+            background-position: 0 3px;
+        }
+
+        .myFavo_icon {
+            background-position: -110px 1px;
+        }
+
+        .watch_icon {
+            background-position: -40px 1px;
+        }
+
+        .watchS_icon {
+            background-position: -80px 0;
+            margin-bottom: 5px;
+        }
+
+        .bus_icon {
+            background-position: -60px 1px;
+        }
+
+    }
+
+    .second:hover {
+        position: relative;
+        padding: 0 10px;
+        margin: 0 9px !important;
+        border-left: 1px solid #e7e7e7;
+        border-right: 1px solid #e7e7e7;
+
+        .watch_icon {
+            background-position: -40px -19px;
+        }
+
+        .watchS_icon {
+            background-position: -95px 0;
+        }
+
+        background-color: white;
+
+        .attention {
+            display: block;
+        }
+
+    }
+
+    .attention {
+        cursor: pointer;
+        width: 180px;
+        position: absolute;
+        left: -1px;
+        top: 31px;
+        border: 1px solid #e7e7e7;
+        border-top: 0;
+        padding: 10px;
+        background: white;
+        display: none;
+
+        img {
+            float: left;
+            width: 80px;
+            height: 80px;
+
+        }
+
+        div {
+            float: left;
+            color: black;
+            line-height: 25px;
+            margin-left: 14px;
+            margin-top: 20px;
+        }
+
+    }
+
 }
+
 
 /* 头部下面 */
 
@@ -89,16 +278,17 @@ li {
         height: 14px;
         line-height: 14px;
         padding-top: 10px;
-        color: #c7c7c7;
         font-size: 12px;
 
-        span {
-            background: #e5e5e5;
-            width: 1px;
-            height: 8px;
-            display: inline-block;
-            margin: 0 8px;
+        a {
+            color: #c7c7c7;
         }
+
+        a:hover {
+            color: $color;
+        }
+
+
     }
 }
 
@@ -151,18 +341,35 @@ li {
 }
 
 /* 导航栏 */
-nav ul {
+nav {
     background: $color;
-    height: 40px;
-    line-height: 40px;
+
+    font-size: 16px;
+
+    ul {
+        width: $typeArea;
+        margin: 0 auto;
+        height: 40px;
+        line-height: 40px;
+
+    }
 
     li {
         float: left;
+        width: 82px;
 
         a {
             color: white;
-            text-decoration: none;
+            display: block;
+            text-align: center;
+            height: 37px;
         }
+
+    }
+
+    .active {
+        border-bottom: 3px solid #cc0e2b;
+        font-weight: bold;
     }
 
 }
@@ -231,6 +438,71 @@ nav ul {
     margin: 0 auto;
 }
 
+/* 每一部分头部 */
+.main-top {
+    height: 36px;
+    margin: 15px 0;
+
+    .main-top-left {
+        float: left;
+
+        .spbig {
+            vertical-align: top;
+            line-height: 36px;
+            margin: 0 10px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .spsmall {
+            display: inline-block;
+            line-height: 45px;
+            font-size: 16px;
+            color: #c2c2c2;
+            vertical-align: top;
+        }
+
+        .line {
+            margin-bottom: 9px;
+            margin-left: -2px;
+            color: #c2c2c2;
+            height: 10px;
+        }
+    }
+
+    /* 更多，进入列表页 */
+    .main-top-right {
+        float: right;
+        margin-top: 10px;
+        font-size: 14px;
+
+        span {
+            color: #666;
+        }
+
+        em {
+            background: url('http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/iqiyiMallPcRedMore.png') no-repeat;
+            display: inline-block;
+            height: 12px;
+            width: 6px;
+            background-position: 0 0;
+            overflow: hidden;
+        }
+
+
+    }
+
+    a:hover {
+        span {
+            color: $color;
+        }
+
+        em {
+            background-position: -6px 0;
+        }
+    }
+}
+
 /* 每日精选 */
 .daily {
     margin-top: 40px;
@@ -239,24 +511,99 @@ nav ul {
         width: $typeArea;
         margin: 0 auto;
 
-        .main-top {
-            height: 36px;
-            line-height: 36px;
-            margin: 15px 0;
-            background: paleturquoise;
 
-            .main-top-left {
-                float: left;
-            }
 
-            .main-top-right {
-                float: right;
+        /* 每日精选商品列表 */
+        .main-goods {
+            height: 515px;
+
+            ul {
+                width: 100%;
+                height: 100%;
+                margin-left: -1px;
+                margin-top: -1px;
+                border-right: 1px solid #e5e5e5;
+                border-bottom: 1px solid #e5e5e5;
+
+                li {
+                    float: left;
+                    border-top: 1px solid #e5e5e5;
+                    border-left: 1px solid #e5e5e5;
+                    width: 239px;
+                    height: 257px;
+                }
+
+                a {
+                    display: block;
+                }
             }
         }
 
-        .main-goods {
-            background: blueviolet;
-            height: 515px;
+        .main-goods-list {
+            a {
+                padding: 15px;
+
+                div {
+                    text-align: center;
+                }
+
+                img {
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+
+            .title {
+                color: #333;
+                line-height: 22px;
+                font-size: 14px;
+                margin-top: 15px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            .bgmess {
+                display: inline-block;
+                padding-left: 7px;
+                height: 18px;
+                line-height: 18px;
+                background: url('http://www.iqiyipic.com/common/fix/PCIndex/images/newPCindexproductStatus.png') no-repeat;
+                font-size: 12px;
+                color: #fff;
+            }
+
+            .des {
+                font-size: 12px;
+                color: #999;
+                line-height: 20px;
+                height: 20px;
+                font-style: normal;
+            }
+
+            .pricemess {
+                height: 44px;
+                line-height: 44px;
+            }
+
+            .price {
+                float: left;
+                font-size: 20px;
+                color: #ee394b;
+
+            }
+
+            .sail {
+                float: right;
+                font-size: 12px;
+                color: #999;
+
+            }
+
+            .sails {
+                font-weight: normal;
+                margin-left: 8px;
+            }
         }
     }
 }
@@ -267,24 +614,231 @@ nav ul {
         @include clearfix()
     }
 
+    /* 今日特卖左边列表 */
     .main-list-left {
         float: left;
 
         ul {
             width: 840px;
             height: 600px;
-            background: chartreuse;
+
+            li {
+                width: 100%;
+                border: 1px solid #e5e5e5;
+                box-sizing: border-box;
+                height: 292px;
+                margin-bottom: 10px;
+            }
+
+            .showinfo {
+                float: left;
+                width: 258px;
+                margin-top: 120px;
+                text-align: center;
+            }
+
+            .infotitle {
+                font-size: 24px;
+                color: #333;
+                height: 24px;
+                line-height: 24px;
+            }
+
+            .infoprice {
+                font-size: 18px;
+                color: #666;
+                line-height: 18px;
+                margin-top: 14px;
+                height: 18px;
+            }
+
+            .infoprice:hover {
+                color: $color;
+            }
+
+            img {
+                width: 580px;
+                float: right;
+            }
+
+            li:hover {
+                cursor: pointer;
+            }
+
         }
     }
 
+    /* 热销榜单 */
     .main-list-right {
         float: right;
-        height: 300px;
         width: 340px;
-        background: rgb(241, 11, 107);
+
+        .rightlist {
+            margin-bottom: 20px;
+            .recommend {
+
+                li {
+                    margin-bottom: 25px;
+                }
+                li:last-child {
+                    margin-bottom: 0
+                }
+            }
+        }
+
+        .sortTop {
+            width: 100%;
+            background: url('http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/nav_tint_redbg.png') no-repeat;
+            height: 50px;
+            line-height: 50px;
+
+            em {
+                background: url('http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/good_hot_redranking.png') no-repeat;
+                margin: 15px 12px 0 16px;
+                float: left;
+                height: 19px;
+                width: 19px;
+            }
+
+            span {
+                font-size: 21px;
+                color: #333;
+                float: left;
+            }
+        }
+
+        .sortlist {
+            border: 1px solid #e5e5e5;
+            border-top: 0;
+            padding: 10px;
+
+            &::after {
+                @include clearfix()
+            }
+
+            li {
+                margin-bottom: 10px;
+
+                &::after {
+                    @include clearfix()
+                }
+            }
+
+            .img {
+                width: 90px;
+                height: 90px;
+                float: left;
+            }
+
+            h2 {
+
+                width: 57px;
+                height: 20px;
+                margin-bottom: 10px;
+            }
+
+            li:nth-child(1) h2 {
+                background: url('http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_first.png') no-repeat;
+            }
+
+            li:nth-child(2) h2 {
+                background: url('http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_second.png') no-repeat;
+            }
+
+            li:nth-child(3) h2 {
+                background: url('http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_third.png') no-repeat;
+            }
+
+            li:nth-child(4) h2 {
+                background: url('http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_fourth.png') no-repeat;
+            }
+
+            li:nth-child(5) h2 {
+                background: url('http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_fifth.png') no-repeat;
+            }
+
+            li:nth-child(5) {
+                div {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .sortright {
+            float: left;
+            height: 100px;
+            width: 200px;
+            margin-left: 25px;
+            margin-top: 5px;
+            border-bottom: 1px solid #e5e5e5;
+
+
+            .des {
+                font-size: 14px;
+                color: #777;
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-height: 14px;
+            }
+
+            .pricmess {
+                margin-top: 25px;
+            }
+
+            .price {
+                font-size: 18px;
+                color: #ee394b;
+                float: left;
+            }
+
+            span {
+                font-size: 12px;
+                color: #999;
+                float: right;
+            }
+
+            .sail {
+                color: $color;
+            }
+        }
+
     }
 }
 
+/* 热门推荐 */
+.recommend {
+    img {
+        width: 320px;
+        height: 160px;
+    }
+
+    .title1 {
+        font-size: 14px;
+        color: #333;
+        line-height: 14px;
+        height: 14px;
+        margin: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .title2 {
+        font-size: 12px;
+        color: #999;
+        line-height: 12px;
+        margin: 0 10px;
+        height: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}
+
+/* 底部logo列表 */
 .logolist {
     ul {
         overflow: hidden;
@@ -310,6 +864,7 @@ nav ul {
 
 }
 
+/* 尾部 */
 footer {
     width: 100%;
     background: #fafafa;
