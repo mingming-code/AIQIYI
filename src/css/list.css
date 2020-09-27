@@ -1,0 +1,462 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 1200px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 声明混合清浮动 */
+.line {
+  background: #e5e5e5;
+  width: 1px;
+  height: 8px;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+header .floatline {
+  float: left;
+  margin: 10px 0;
+}
+
+/* 头部上方 */
+.head-top {
+  background: #f7f7f7;
+  font-size: 12px;
+  color: #999;
+  border-bottom: 1px solid #e7e7e7;
+  /* 悬浮图标切换 */
+}
+.head-top .head-top-area {
+  width: 1200px;
+  margin: 0 auto;
+  height: 32px;
+  line-height: 32px;
+}
+.head-top .head-top-area a {
+  color: #999;
+}
+.head-top .left {
+  float: left;
+}
+.head-top .left li {
+  float: left;
+  padding-right: 20px;
+}
+.head-top .left li a:hover {
+  color: #ee394b;
+}
+.head-top .right {
+  float: right;
+}
+.head-top .right a:hover {
+  color: #ee394b;
+}
+.head-top .right li {
+  float: left;
+}
+.head-top .right .first {
+  padding-left: 20px;
+}
+.head-top .right .second {
+  margin: 0 20px;
+}
+.head-top .right .second span {
+  color: #999;
+  cursor: pointer;
+}
+.head-top .right .second:hover span {
+  color: #ee394b;
+}
+.head-top .right a span {
+  color: #ee394b;
+  font-weight: bold;
+}
+.head-top .right i {
+  display: inline-block;
+}
+.head-top .right .topNavCar {
+  width: 15px;
+  height: 13px;
+  margin-top: 2px;
+  background-position: -135px 1px;
+}
+.head-top .right .topNav_icon1 {
+  width: 10px;
+  height: 15px;
+}
+.head-top .right .topNav_icon2 {
+  width: 12px;
+  height: 13px;
+}
+.head-top .right .topNav_icon3 {
+  width: 5px;
+  height: 3px;
+  margin-left: 5px;
+}
+.head-top .right .topNav_icon1,
+.head-top .right .topNav_icon2,
+.head-top .right .topNav_icon3,
+.head-top .right .topNavCar {
+  background-image: url(http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/topMenu_redicon.png);
+  background-repeat: no-repeat;
+}
+.head-top .right .myOrder_icon {
+  background-position: 0 3px;
+}
+.head-top .right .myFavo_icon {
+  background-position: -110px 1px;
+}
+.head-top .right .watch_icon {
+  background-position: -40px 1px;
+}
+.head-top .right .watchS_icon {
+  background-position: -80px 0;
+  margin-bottom: 5px;
+}
+.head-top .right .bus_icon {
+  background-position: -60px 1px;
+}
+.head-top .carli:hover .topNavCar {
+  background-position: -135px -19px;
+}
+.head-top .myOrdrli:hover .myOrder_icon {
+  background-position: 0 -37px;
+}
+.head-top .myFavoli:hover .myFavo_icon {
+  background-position: -110px -39px;
+}
+.head-top .busli:hover .bus_icon {
+  background-position: -60px -19px;
+}
+.head-top .attActive:hover {
+  position: relative;
+  padding: 0 10px;
+  margin: 0 9px !important;
+  border-left: 1px solid #e7e7e7;
+  border-right: 1px solid #e7e7e7;
+  background-color: white;
+}
+.head-top .attActive:hover .watch_icon {
+  background-position: -40px -19px;
+}
+.head-top .attActive:hover .watchS_icon {
+  background-position: -95px 0;
+}
+.head-top .attActive:hover .attention {
+  display: block;
+}
+.head-top .attention {
+  cursor: pointer;
+  width: 180px;
+  position: absolute;
+  left: -1px;
+  top: 31px;
+  border: 1px solid #e7e7e7;
+  border-top: 0;
+  padding: 10px;
+  background: white;
+  display: none;
+}
+.head-top .attention img {
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+.head-top .attention div {
+  float: left;
+  color: black;
+  line-height: 25px;
+  margin-left: 14px;
+  margin-top: 20px;
+}
+
+/* 头部下面 */
+.head-bottom-area {
+  width: 1200px;
+  margin: 0 auto;
+  height: 97px;
+  padding-top: 30px;
+}
+.head-bottom-area h1 {
+  float: left;
+}
+
+/* 搜索框 */
+.search {
+  width: 510px;
+  margin-left: 155px;
+  float: left;
+}
+.search p {
+  width: 100%;
+  height: 34px;
+  border: 1px solid #ee394b;
+  font-size: 12px;
+  color: #999999;
+}
+.search p input {
+  border: 0;
+  outline: none;
+  width: 316px;
+  height: 34px;
+  margin: 0 5px;
+}
+.search p button {
+  border: 0;
+  outline: none;
+  width: 100px;
+  height: 34px;
+  background: #ee394b;
+  float: right;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  line-height: 34px;
+}
+.search div {
+  height: 14px;
+  line-height: 14px;
+  padding-top: 10px;
+  font-size: 12px;
+}
+.search div a {
+  color: #c7c7c7;
+}
+.search div a:hover {
+  color: #ee394b;
+}
+
+/* 头部右边轮播广告 */
+.head-bottom ul {
+  float: right;
+  padding-right: 15px;
+}
+.head-bottom ul img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 10px;
+}
+.head-bottom ul div {
+  float: left;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.head-bottom ul div p {
+  line-height: 23px;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.head-bottom ul div span {
+  color: #666;
+}
+
+.head-btn {
+  float: right;
+  margin: 31px 0 0 10px;
+  width: 39px;
+  height: 19px;
+  background: url("http://pic0.iqiyipic.com/common/20150714/arrow2.gif");
+}
+.head-btn span {
+  float: left;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+}
+
+/* 导航栏 */
+nav {
+  background: #ee394b;
+  font-size: 16px;
+}
+nav ul {
+  width: 1200px;
+  margin: 0 auto;
+  height: 40px;
+  line-height: 40px;
+}
+nav li {
+  float: left;
+  width: 82px;
+  border-bottom: 3px solid transparent;
+}
+nav li a {
+  color: white;
+  display: block;
+  text-align: center;
+  height: 37px;
+}
+nav li:hover {
+  border-bottom: 3px solid #cc0e2b;
+  transition: border-bottom 1s;
+}
+nav .active {
+  border-bottom: 3px solid #cc0e2b;
+  font-weight: bold;
+}
+
+/* 引入底部样式 */
+/* 尾部 */
+footer {
+  width: 100%;
+  background: #fafafa;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding-top: 34px;
+}
+footer .foot {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 12px;
+}
+footer .foot .circle {
+  display: flex;
+  justify-content: space-around;
+}
+footer .foot .circle .img {
+  float: left;
+}
+footer .foot .circle .mess {
+  color: #777;
+  font-size: 12px;
+  float: left;
+  margin-left: 18px;
+  margin-top: 15px;
+}
+footer .foot .code {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 34px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+footer .foot .code::after {
+  content: "";
+  height: 0;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
+footer .float {
+  float: left;
+}
+footer .float .codeleft {
+  float: left;
+}
+footer .float .codeleft img {
+  width: 120px;
+  height: 120px;
+}
+footer .float .messright {
+  float: left;
+  width: 270px;
+  margin-left: 10px;
+  font-size: 12px;
+}
+footer .float .messright h1 {
+  color: #333;
+  font-size: 22px;
+  padding-bottom: 5px;
+}
+footer .float .messright p {
+  color: #666;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.foot-bottom {
+  padding-bottom: 36px;
+  background: #f5f5f5;
+}
+.foot-bottom .contain {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 12px;
+  text-decoration: none;
+}
+.foot-bottom .contain .contain-top {
+  height: 120px;
+}
+.foot-bottom .contain .footnav {
+  text-align: center;
+  padding: 5px 0;
+}
+.foot-bottom .contain .footnav a {
+  text-decoration: none;
+  color: #333;
+}
+.foot-bottom .contain .footnav span {
+  margin: 0 3px 0 7px;
+  color: #333;
+}
+.foot-bottom .contain .report {
+  text-align: center;
+  padding: 5px 0;
+}
+.foot-bottom .contain .report a {
+  color: #666;
+  text-decoration: none;
+}
+.foot-bottom .contain .report .ml30 {
+  margin-left: 30px;
+}
+.foot-bottom .contain .copyright {
+  text-align: center;
+  padding: 5px 0;
+  color: #777;
+}
+.foot-bottom .contain .copyright a {
+  color: #777;
+  text-decoration: none;
+}
+.foot-bottom .contain .copyright a:hover {
+  color: red;
+}
+
+/* 回到底部 */
+.scrollmenu {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  display: none;
+}
+.scrollmenu a {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/baseRedScrollBar.png");
+}
+.scrollmenu .feedBack {
+  margin-bottom: 10px;
+}
+.scrollmenu .feedBack a {
+  background-position: -50px -82px;
+}
+.scrollmenu .feedBack a:hover {
+  background-position: -50px 0px;
+}
+.scrollmenu .toTop a {
+  background-position: -50px -46px;
+}
+.scrollmenu .toTop a:hover {
+  background-position: -50px -130px;
+}
+
+/*# sourceMappingURL=list.css.map */

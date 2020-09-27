@@ -1,16 +1,20 @@
 @charset "UTF-8";
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
-  min-width: 1200px; }
+  min-width: 1200px;
+}
 
 li {
-  list-style: none; }
+  list-style: none;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /* 声明混合清浮动 */
 .line {
@@ -18,515 +22,698 @@ a {
   width: 1px;
   height: 8px;
   display: inline-block;
-  margin: 0 8px; }
+  margin: 0 8px;
+}
 
 header .floatline {
   float: left;
-  margin: 10px 0; }
+  margin: 10px 0;
+}
 
 /* 头部上方 */
 .head-top {
   background: #f7f7f7;
   font-size: 12px;
   color: #999;
-  border-bottom: 1px solid #e7e7e7; }
-  .head-top .head-top-area {
-    width: 1200px;
-    margin: 0 auto;
-    height: 32px;
-    line-height: 32px; }
-    .head-top .head-top-area a {
-      color: #999; }
-  .head-top .left {
-    float: left; }
-    .head-top .left li {
-      float: left;
-      padding-right: 20px; }
-      .head-top .left li a:hover {
-        color: #ee394b; }
-  .head-top .right {
-    float: right; }
-    .head-top .right li {
-      float: left; }
-    .head-top .right .first {
-      padding-left: 20px; }
-    .head-top .right .second {
-      margin: 0 20px; }
-      .head-top .right .second span {
-        color: #999;
-        cursor: pointer; }
-    .head-top .right .second:hover span {
-      color: #ee394b; }
-    .head-top .right a span {
-      color: #ee394b;
-      font-weight: bold; }
-    .head-top .right i {
-      display: inline-block; }
-    .head-top .right .topNavCar {
-      width: 15px;
-      height: 13px;
-      margin-top: 2px;
-      background-position: -135px 1px; }
-    .head-top .right .topNav_icon1 {
-      width: 10px;
-      height: 15px; }
-    .head-top .right .topNav_icon2 {
-      width: 12px;
-      height: 13px; }
-    .head-top .right .topNav_icon3 {
-      width: 5px;
-      height: 3px;
-      margin-left: 5px; }
-    .head-top .right .topNav_icon1,
-    .head-top .right .topNav_icon2,
-    .head-top .right .topNav_icon3,
-    .head-top .right .topNavCar {
-      background-image: url(http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/topMenu_redicon.png);
-      background-repeat: no-repeat; }
-    .head-top .right .myOrder_icon {
-      background-position: 0 3px; }
-    .head-top .right .myFavo_icon {
-      background-position: -110px 1px; }
-    .head-top .right .watch_icon {
-      background-position: -40px 1px; }
-    .head-top .right .watchS_icon {
-      background-position: -80px 0;
-      margin-bottom: 5px; }
-    .head-top .right .bus_icon {
-      background-position: -60px 1px; }
-  .head-top .second:hover {
-    position: relative;
-    padding: 0 10px;
-    margin: 0 9px !important;
-    border-left: 1px solid #e7e7e7;
-    border-right: 1px solid #e7e7e7;
-    background-color: white; }
-    .head-top .second:hover .watch_icon {
-      background-position: -40px -19px; }
-    .head-top .second:hover .watchS_icon {
-      background-position: -95px 0; }
-    .head-top .second:hover .attention {
-      display: block; }
-  .head-top .attention {
-    cursor: pointer;
-    width: 180px;
-    position: absolute;
-    left: -1px;
-    top: 31px;
-    border: 1px solid #e7e7e7;
-    border-top: 0;
-    padding: 10px;
-    background: white;
-    display: none; }
-    .head-top .attention img {
-      float: left;
-      width: 80px;
-      height: 80px; }
-    .head-top .attention div {
-      float: left;
-      color: black;
-      line-height: 25px;
-      margin-left: 14px;
-      margin-top: 20px; }
+  border-bottom: 1px solid #e7e7e7;
+  /* 悬浮图标切换 */
+}
+.head-top .head-top-area {
+  width: 1200px;
+  margin: 0 auto;
+  height: 32px;
+  line-height: 32px;
+}
+.head-top .head-top-area a {
+  color: #999;
+}
+.head-top .left {
+  float: left;
+}
+.head-top .left li {
+  float: left;
+  padding-right: 20px;
+}
+.head-top .left li a:hover {
+  color: #ee394b;
+}
+.head-top .right {
+  float: right;
+}
+.head-top .right a:hover {
+  color: #ee394b;
+}
+.head-top .right li {
+  float: left;
+}
+.head-top .right .first {
+  padding-left: 20px;
+}
+.head-top .right .second {
+  margin: 0 20px;
+}
+.head-top .right .second span {
+  color: #999;
+  cursor: pointer;
+}
+.head-top .right .second:hover span {
+  color: #ee394b;
+}
+.head-top .right a span {
+  color: #ee394b;
+  font-weight: bold;
+}
+.head-top .right i {
+  display: inline-block;
+}
+.head-top .right .topNavCar {
+  width: 15px;
+  height: 13px;
+  margin-top: 2px;
+  background-position: -135px 1px;
+}
+.head-top .right .topNav_icon1 {
+  width: 10px;
+  height: 15px;
+}
+.head-top .right .topNav_icon2 {
+  width: 12px;
+  height: 13px;
+}
+.head-top .right .topNav_icon3 {
+  width: 5px;
+  height: 3px;
+  margin-left: 5px;
+}
+.head-top .right .topNav_icon1,
+.head-top .right .topNav_icon2,
+.head-top .right .topNav_icon3,
+.head-top .right .topNavCar {
+  background-image: url(http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/topMenu_redicon.png);
+  background-repeat: no-repeat;
+}
+.head-top .right .myOrder_icon {
+  background-position: 0 3px;
+}
+.head-top .right .myFavo_icon {
+  background-position: -110px 1px;
+}
+.head-top .right .watch_icon {
+  background-position: -40px 1px;
+}
+.head-top .right .watchS_icon {
+  background-position: -80px 0;
+  margin-bottom: 5px;
+}
+.head-top .right .bus_icon {
+  background-position: -60px 1px;
+}
+.head-top .carli:hover .topNavCar {
+  background-position: -135px -19px;
+}
+.head-top .myOrdrli:hover .myOrder_icon {
+  background-position: 0 -37px;
+}
+.head-top .myFavoli:hover .myFavo_icon {
+  background-position: -110px -39px;
+}
+.head-top .busli:hover .bus_icon {
+  background-position: -60px -19px;
+}
+.head-top .attActive:hover {
+  position: relative;
+  padding: 0 10px;
+  margin: 0 9px !important;
+  border-left: 1px solid #e7e7e7;
+  border-right: 1px solid #e7e7e7;
+  background-color: white;
+}
+.head-top .attActive:hover .watch_icon {
+  background-position: -40px -19px;
+}
+.head-top .attActive:hover .watchS_icon {
+  background-position: -95px 0;
+}
+.head-top .attActive:hover .attention {
+  display: block;
+}
+.head-top .attention {
+  cursor: pointer;
+  width: 180px;
+  position: absolute;
+  left: -1px;
+  top: 31px;
+  border: 1px solid #e7e7e7;
+  border-top: 0;
+  padding: 10px;
+  background: white;
+  display: none;
+}
+.head-top .attention img {
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+.head-top .attention div {
+  float: left;
+  color: black;
+  line-height: 25px;
+  margin-left: 14px;
+  margin-top: 20px;
+}
 
 /* 头部下面 */
 .head-bottom-area {
   width: 1200px;
   margin: 0 auto;
   height: 97px;
-  padding-top: 30px; }
-  .head-bottom-area h1 {
-    float: left; }
+  padding-top: 30px;
+}
+.head-bottom-area h1 {
+  float: left;
+}
 
 /* 搜索框 */
 .search {
   width: 510px;
   margin-left: 155px;
-  float: left; }
-  .search p {
-    width: 100%;
-    height: 34px;
-    border: 1px solid #ee394b;
-    font-size: 12px;
-    color: #999999; }
-    .search p input {
-      border: 0;
-      outline: none;
-      width: 316px;
-      height: 34px;
-      margin: 0 5px; }
-    .search p button {
-      border: 0;
-      outline: none;
-      width: 100px;
-      height: 34px;
-      background: #ee394b;
-      float: right;
-      color: white;
-      cursor: pointer;
-      text-align: center;
-      font-size: 20px;
-      line-height: 34px; }
-  .search div {
-    height: 14px;
-    line-height: 14px;
-    padding-top: 10px;
-    font-size: 12px; }
-    .search div a {
-      color: #c7c7c7; }
-    .search div a:hover {
-      color: #ee394b; }
+  float: left;
+}
+.search p {
+  width: 100%;
+  height: 34px;
+  border: 1px solid #ee394b;
+  font-size: 12px;
+  color: #999999;
+}
+.search p input {
+  border: 0;
+  outline: none;
+  width: 316px;
+  height: 34px;
+  margin: 0 5px;
+}
+.search p button {
+  border: 0;
+  outline: none;
+  width: 100px;
+  height: 34px;
+  background: #ee394b;
+  float: right;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  line-height: 34px;
+}
+.search div {
+  height: 14px;
+  line-height: 14px;
+  padding-top: 10px;
+  font-size: 12px;
+}
+.search div a {
+  color: #c7c7c7;
+}
+.search div a:hover {
+  color: #ee394b;
+}
 
 /* 头部右边轮播广告 */
 .head-bottom ul {
   float: right;
-  padding-right: 15px; }
-  .head-bottom ul img {
-    width: 50px;
-    height: 50px;
-    float: left;
-    margin-right: 10px; }
-  .head-bottom ul div {
-    float: left;
-    font-size: 12px;
-    margin-top: 5px; }
-    .head-bottom ul div p {
-      line-height: 23px;
-      color: #999;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      cursor: pointer; }
-    .head-bottom ul div span {
-      color: #666; }
+  padding-right: 15px;
+}
+.head-bottom ul img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 10px;
+}
+.head-bottom ul div {
+  float: left;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.head-bottom ul div p {
+  line-height: 23px;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.head-bottom ul div span {
+  color: #666;
+}
 
 .head-btn {
   float: right;
   margin: 31px 0 0 10px;
   width: 39px;
   height: 19px;
-  background: url("http://pic0.iqiyipic.com/common/20150714/arrow2.gif"); }
-  .head-btn span {
-    float: left;
-    width: 19px;
-    height: 19px;
-    cursor: pointer; }
+  background: url("http://pic0.iqiyipic.com/common/20150714/arrow2.gif");
+}
+.head-btn span {
+  float: left;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+}
 
 /* 导航栏 */
 nav {
   background: #ee394b;
-  font-size: 16px; }
-  nav ul {
-    width: 1200px;
-    margin: 0 auto;
-    height: 40px;
-    line-height: 40px; }
-  nav li {
-    float: left;
-    width: 82px; }
-    nav li a {
-      color: white;
-      display: block;
-      text-align: center;
-      height: 37px; }
-  nav .active {
-    border-bottom: 3px solid #cc0e2b;
-    font-weight: bold; }
+  font-size: 16px;
+}
+nav ul {
+  width: 1200px;
+  margin: 0 auto;
+  height: 40px;
+  line-height: 40px;
+}
+nav li {
+  float: left;
+  width: 82px;
+  border-bottom: 3px solid transparent;
+}
+nav li a {
+  color: white;
+  display: block;
+  text-align: center;
+  height: 37px;
+}
+nav li:hover {
+  border-bottom: 3px solid #cc0e2b;
+  transition: border-bottom 1s;
+}
+nav .active {
+  border-bottom: 3px solid #cc0e2b;
+  font-weight: bold;
+}
 
 /*  轮播图 */
 .banner {
-  position: relative; }
+  position: relative;
+  /* 轮播图左右箭头 */
+}
+.banner .arrow {
+  width: 66px;
+  height: 66px;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+}
+.banner .left {
+  background: url("http://www.iqiyipic.com/common/fix/PCIndex/images/new_focus_prev.png") no-repeat 0 0;
+  left: 50%;
+  margin-left: -600px;
+}
+.banner .right {
+  background: url("http://www.iqiyipic.com/common/fix/PCIndex/images/new_focus_next.png") no-repeat 0 0;
+  right: 50%;
+  margin-right: -600px;
+}
 
+/* 轮播图下面的小圆圈 */
 .banner ol {
   position: absolute;
   left: 50%;
   bottom: 22px;
-  transform: translateX(-50%); }
-  .banner ol li {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.4);
-    float: left;
-    margin: 0 6px;
-    text-indent: -9999px; }
+  transform: translateX(-50%);
+}
+.banner ol li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  float: left;
+  margin: 0 6px;
+  text-indent: -9999px;
+}
+.banner ol .active {
+  background: #ee394b;
+}
 
 .banner ul li {
-  display: none; }
-  .banner ul li a {
-    display: block;
-    height: 400px;
-    background: url("http://pic0.iqiyipic.com/common/20200304/512956b04fe9447db308928593a5ae93.jpg") no-repeat center center; }
+  display: none;
+}
+.banner ul li a {
+  display: block;
+  height: 400px;
+  background: url("http://pic0.iqiyipic.com/common/20200304/512956b04fe9447db308928593a5ae93.jpg") no-repeat center center;
+}
 
 .banner li:nth-child(2) a {
-  background-image: url("http://pic0.iqiyipic.com/common/20200318/c36d469339ba4996af71e7fc8406c86d.jpg"); }
+  background-image: url("http://pic0.iqiyipic.com/common/20200318/c36d469339ba4996af71e7fc8406c86d.jpg");
+}
 
 .banner li:nth-child(3) a {
-  background-image: url("http://pic2.iqiyipic.com/common/20200219/03222235322145a4ac10076b1bbb105b.jpg"); }
+  background-image: url("http://pic2.iqiyipic.com/common/20200219/03222235322145a4ac10076b1bbb105b.jpg");
+}
 
 .banner li:nth-child(4) a {
-  background-image: url("http://pic3.iqiyipic.com/common/20200218/5b0d6aa4382f4cfaa61f592a5b078fbb.jpg"); }
+  background-image: url("http://pic3.iqiyipic.com/common/20200218/5b0d6aa4382f4cfaa61f592a5b078fbb.jpg");
+}
 
 /* 广告图 */
 .banner1 {
   margin-top: 40px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+}
 
 .ad {
   width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 /* 每一部分头部 */
 .main-top {
   height: 36px;
   margin: 15px 0;
-  /* 更多，进入列表页 */ }
-  .main-top .main-top-left {
-    float: left; }
-    .main-top .main-top-left .spbig {
-      vertical-align: top;
-      line-height: 36px;
-      margin: 0 10px;
-      font-size: 28px;
-      color: #333; }
-    .main-top .main-top-left .spsmall {
-      display: inline-block;
-      line-height: 45px;
-      font-size: 16px;
-      color: #c2c2c2;
-      vertical-align: top; }
-    .main-top .main-top-left .line {
-      margin-bottom: 9px;
-      margin-left: -2px;
-      color: #c2c2c2;
-      height: 10px; }
-  .main-top .main-top-right {
-    float: right;
-    margin-top: 10px;
-    font-size: 14px; }
-    .main-top .main-top-right span {
-      color: #666; }
-    .main-top .main-top-right em {
-      background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/iqiyiMallPcRedMore.png") no-repeat;
-      display: inline-block;
-      height: 12px;
-      width: 6px;
-      background-position: 0 0;
-      overflow: hidden; }
-  .main-top a:hover span {
-    color: #ee394b; }
-  .main-top a:hover em {
-    background-position: -6px 0; }
+  /* 更多，进入列表页 */
+}
+.main-top .main-top-left {
+  float: left;
+}
+.main-top .main-top-left .spbig {
+  vertical-align: top;
+  line-height: 36px;
+  margin: 0 10px;
+  font-size: 28px;
+  color: #333;
+}
+.main-top .main-top-left .spsmall {
+  display: inline-block;
+  line-height: 45px;
+  font-size: 16px;
+  color: #c2c2c2;
+  vertical-align: top;
+}
+.main-top .main-top-left .line {
+  margin-bottom: 9px;
+  margin-left: -2px;
+  color: #c2c2c2;
+  height: 10px;
+}
+.main-top .main-top-right {
+  float: right;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.main-top .main-top-right span {
+  color: #666;
+}
+.main-top .main-top-right em {
+  background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/iqiyiMallPcRedMore.png") no-repeat;
+  display: inline-block;
+  height: 12px;
+  width: 6px;
+  background-position: 0 0;
+  overflow: hidden;
+}
+.main-top a:hover span {
+  color: #ee394b;
+}
+.main-top a:hover em {
+  background-position: -6px 0;
+}
 
 /* 每日精选 */
 .daily {
-  margin-top: 40px; }
-  .daily .main {
-    width: 1200px;
-    margin: 0 auto;
-    /* 每日精选商品列表 */ }
-    .daily .main .main-goods {
-      height: 515px; }
-      .daily .main .main-goods ul {
-        width: 100%;
-        height: 100%;
-        margin-left: -1px;
-        margin-top: -1px;
-        border-right: 1px solid #e5e5e5;
-        border-bottom: 1px solid #e5e5e5; }
-        .daily .main .main-goods ul li {
-          float: left;
-          border-top: 1px solid #e5e5e5;
-          border-left: 1px solid #e5e5e5;
-          width: 239px;
-          height: 257px; }
-        .daily .main .main-goods ul a {
-          display: block; }
-    .daily .main .main-goods-list a {
-      padding: 15px; }
-      .daily .main .main-goods-list a div {
-        text-align: center; }
-      .daily .main .main-goods-list a img {
-        width: 140px;
-        height: 140px; }
-    .daily .main .main-goods-list .title {
-      color: #333;
-      line-height: 22px;
-      font-size: 14px;
-      margin-top: 15px;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden; }
-    .daily .main .main-goods-list .bgmess {
-      display: inline-block;
-      padding-left: 7px;
-      height: 18px;
-      line-height: 18px;
-      background: url("http://www.iqiyipic.com/common/fix/PCIndex/images/newPCindexproductStatus.png") no-repeat;
-      font-size: 12px;
-      color: #fff; }
-    .daily .main .main-goods-list .des {
-      font-size: 12px;
-      color: #999;
-      line-height: 20px;
-      height: 20px;
-      font-style: normal; }
-    .daily .main .main-goods-list .pricemess {
-      height: 44px;
-      line-height: 44px; }
-    .daily .main .main-goods-list .price {
-      float: left;
-      font-size: 20px;
-      color: #ee394b; }
-    .daily .main .main-goods-list .sail {
-      float: right;
-      font-size: 12px;
-      color: #999; }
-    .daily .main .main-goods-list .sails {
-      font-weight: normal;
-      margin-left: 8px; }
+  margin-top: 40px;
+}
+.daily .main {
+  width: 1200px;
+  margin: 0 auto;
+  /* 每日精选商品列表 */
+}
+.daily .main .main-goods ul {
+  width: 100%;
+  height: 100%;
+  margin-left: -1px;
+  margin-top: -1px;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.daily .main .main-goods ul::after {
+  content: "";
+  height: 0;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
+.daily .main .main-goods ul li {
+  float: left;
+  border-top: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  width: 239px;
+  height: 257px;
+}
+.daily .main .main-goods ul a {
+  display: block;
+}
+.daily .main .main-goods-list a {
+  padding: 15px;
+}
+.daily .main .main-goods-list a div {
+  text-align: center;
+}
+.daily .main .main-goods-list a img {
+  width: 140px;
+  height: 140px;
+}
+.daily .main .main-goods-list .title {
+  color: #333;
+  line-height: 22px;
+  font-size: 14px;
+  margin-top: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.daily .main .main-goods-list .bgmess {
+  display: inline-block;
+  padding-left: 7px;
+  height: 18px;
+  line-height: 18px;
+  background: url("../img/bg.png") no-repeat;
+  font-size: 12px;
+  color: #fff;
+}
+.daily .main .main-goods-list .des {
+  font-size: 12px;
+  color: #999;
+  line-height: 20px;
+  height: 20px;
+  font-style: normal;
+}
+.daily .main .main-goods-list .pricemess {
+  height: 44px;
+  line-height: 44px;
+}
+.daily .main .main-goods-list .price {
+  float: left;
+  font-size: 20px;
+  color: #ee394b;
+}
+.daily .main .main-goods-list .sail {
+  float: right;
+  font-size: 12px;
+  color: #999;
+}
+.daily .main .main-goods-list .sails {
+  font-weight: normal;
+  margin-left: 8px;
+}
 
 /* 今日特卖 */
-.main-list {
-  /* 今日特卖左边列表 */
-  /* 热销榜单 */ }
-  .main-list::after {
-    content: "";
-    height: 0;
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    clear: both; }
-  .main-list .main-list-left {
-    float: left; }
-    .main-list .main-list-left ul {
-      width: 840px;
-      height: 600px; }
-      .main-list .main-list-left ul li {
-        width: 100%;
-        border: 1px solid #e5e5e5;
-        box-sizing: border-box;
-        height: 292px;
-        margin-bottom: 10px; }
-      .main-list .main-list-left ul .showinfo {
-        float: left;
-        width: 258px;
-        margin-top: 120px;
-        text-align: center; }
-      .main-list .main-list-left ul .infotitle {
-        font-size: 24px;
-        color: #333;
-        height: 24px;
-        line-height: 24px; }
-      .main-list .main-list-left ul .infoprice {
-        font-size: 18px;
-        color: #666;
-        line-height: 18px;
-        margin-top: 14px;
-        height: 18px; }
-      .main-list .main-list-left ul .infoprice:hover {
-        color: #ee394b; }
-      .main-list .main-list-left ul img {
-        width: 580px;
-        float: right; }
-      .main-list .main-list-left ul li:hover {
-        cursor: pointer; }
-  .main-list .main-list-right {
-    float: right;
-    width: 340px; }
-    .main-list .main-list-right .rightlist {
-      margin-bottom: 20px; }
-      .main-list .main-list-right .rightlist .recommend li {
-        margin-bottom: 25px; }
-      .main-list .main-list-right .rightlist .recommend li:last-child {
-        margin-bottom: 0; }
-    .main-list .main-list-right .sortTop {
-      width: 100%;
-      background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/nav_tint_redbg.png") no-repeat;
-      height: 50px;
-      line-height: 50px; }
-      .main-list .main-list-right .sortTop em {
-        background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/good_hot_redranking.png") no-repeat;
-        margin: 15px 12px 0 16px;
-        float: left;
-        height: 19px;
-        width: 19px; }
-      .main-list .main-list-right .sortTop span {
-        font-size: 21px;
-        color: #333;
-        float: left; }
-    .main-list .main-list-right .sortlist {
-      border: 1px solid #e5e5e5;
-      border-top: 0;
-      padding: 10px; }
-      .main-list .main-list-right .sortlist::after {
-        content: "";
-        height: 0;
-        display: block;
-        overflow: hidden;
-        visibility: hidden;
-        clear: both; }
-      .main-list .main-list-right .sortlist li {
-        margin-bottom: 10px; }
-        .main-list .main-list-right .sortlist li::after {
-          content: "";
-          height: 0;
-          display: block;
-          overflow: hidden;
-          visibility: hidden;
-          clear: both; }
-      .main-list .main-list-right .sortlist .img {
-        width: 90px;
-        height: 90px;
-        float: left; }
-      .main-list .main-list-right .sortlist h2 {
-        width: 57px;
-        height: 20px;
-        margin-bottom: 10px; }
-      .main-list .main-list-right .sortlist li:nth-child(1) h2 {
-        background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_first.png") no-repeat; }
-      .main-list .main-list-right .sortlist li:nth-child(2) h2 {
-        background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_second.png") no-repeat; }
-      .main-list .main-list-right .sortlist li:nth-child(3) h2 {
-        background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_third.png") no-repeat; }
-      .main-list .main-list-right .sortlist li:nth-child(4) h2 {
-        background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_fourth.png") no-repeat; }
-      .main-list .main-list-right .sortlist li:nth-child(5) h2 {
-        background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_fifth.png") no-repeat; }
-      .main-list .main-list-right .sortlist li:nth-child(5) div {
-        border-bottom: none; }
-    .main-list .main-list-right .sortright {
-      float: left;
-      height: 100px;
-      width: 200px;
-      margin-left: 25px;
-      margin-top: 5px;
-      border-bottom: 1px solid #e5e5e5; }
-      .main-list .main-list-right .sortright .des {
-        font-size: 14px;
-        color: #777;
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        line-height: 14px; }
-      .main-list .main-list-right .sortright .pricmess {
-        margin-top: 25px; }
-      .main-list .main-list-right .sortright .price {
-        font-size: 18px;
-        color: #ee394b;
-        float: left; }
-      .main-list .main-list-right .sortright span {
-        font-size: 12px;
-        color: #999;
-        float: right; }
-      .main-list .main-list-right .sortright .sail {
-        color: #ee394b; }
+.main-list::after {
+  content: "";
+  height: 0;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
+
+/* 今日特卖左边列表 */
+.main-list-left {
+  float: left;
+}
+.main-list-left ul {
+  width: 840px;
+  height: 600px;
+}
+.main-list-left ul li {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  height: 292px;
+  margin-bottom: 10px;
+}
+.main-list-left ul .showinfo {
+  float: left;
+  width: 258px;
+  margin-top: 120px;
+  text-align: center;
+}
+.main-list-left ul .infotitle {
+  font-size: 24px;
+  color: #333;
+  height: 24px;
+  line-height: 24px;
+}
+.main-list-left ul .infoprice {
+  font-size: 18px;
+  color: #666;
+  line-height: 18px;
+  margin-top: 14px;
+  height: 18px;
+}
+.main-list-left ul .infoprice:hover {
+  color: #ee394b;
+}
+.main-list-left ul img {
+  width: 580px;
+  float: right;
+}
+.main-list-left ul li:hover {
+  cursor: pointer;
+}
+
+/* 热销榜单 */
+.main-list-right {
+  float: right;
+  width: 340px;
+  /* 榜单头部 */
+}
+.main-list-right .rightlist {
+  margin-bottom: 20px;
+}
+.main-list-right .rightlist .recommend li {
+  margin-bottom: 25px;
+}
+.main-list-right .rightlist .recommend li:last-child {
+  margin-bottom: 0;
+}
+.main-list-right .sortTop {
+  width: 100%;
+  background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/nav_tint_redbg.png") no-repeat;
+  height: 50px;
+  line-height: 50px;
+}
+.main-list-right .sortTop em {
+  background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/good_hot_redranking.png") no-repeat;
+  margin: 15px 12px 0 16px;
+  float: left;
+  height: 19px;
+  width: 19px;
+}
+.main-list-right .sortTop span {
+  font-size: 21px;
+  color: #333;
+  float: left;
+}
+.main-list-right .sortlist {
+  border: 1px solid #e5e5e5;
+  border-top: 0;
+  padding: 10px;
+}
+.main-list-right .sortlist::after {
+  content: "";
+  height: 0;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
+.main-list-right .sortlist li {
+  margin-bottom: 10px;
+}
+.main-list-right .sortlist li::after {
+  content: "";
+  height: 0;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
+.main-list-right .sortlist .img {
+  width: 90px;
+  height: 90px;
+  float: left;
+}
+.main-list-right .sortlist h2 {
+  width: 57px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+.main-list-right .sortlist li:nth-child(1) h2 {
+  background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_first.png") no-repeat;
+}
+.main-list-right .sortlist li:nth-child(2) h2 {
+  background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_second.png") no-repeat;
+}
+.main-list-right .sortlist li:nth-child(3) h2 {
+  background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_third.png") no-repeat;
+}
+.main-list-right .sortlist li:nth-child(4) h2 {
+  background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_fourth.png") no-repeat;
+}
+.main-list-right .sortlist li:nth-child(5) h2 {
+  background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/hot_fifth.png") no-repeat;
+}
+.main-list-right .sortlist li:last-child {
+  margin-bottom: 0px;
+}
+.main-list-right .sortlist li:last-child div {
+  border-bottom: none;
+}
+.main-list-right .sortlist1 {
+  padding-bottom: 0;
+}
+.main-list-right .sortright {
+  float: left;
+  height: 100px;
+  width: 200px;
+  margin-left: 25px;
+  margin-top: 5px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.main-list-right .sortright .des {
+  font-size: 14px;
+  color: #777;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 14px;
+}
+.main-list-right .sortright .pricmess {
+  margin-top: 25px;
+}
+.main-list-right .sortright .price {
+  font-size: 18px;
+  color: #ee394b;
+  float: left;
+}
+.main-list-right .sortright span {
+  font-size: 12px;
+  color: #999;
+  float: right;
+}
+.main-list-right .sortright .sail {
+  color: #ee394b;
+  margin-left: 10px;
+}
 
 /* 热门推荐 */
 .recommend img {
   width: 320px;
-  height: 160px; }
+  height: 160px;
+}
 .recommend .title1 {
   font-size: 14px;
   color: #333;
@@ -535,7 +722,8 @@ nav {
   margin: 10px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+}
 .recommend .title2 {
   font-size: 12px;
   color: #999;
@@ -544,116 +732,175 @@ nav {
   height: 12px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+}
 
 /* 底部logo列表 */
 .logolist ul {
   overflow: hidden;
   height: 239px;
   position: relative;
-  border: 1px solid #e5e5e5; }
-  .logolist ul li {
-    width: 1200px;
-    overflow: hidden;
-    margin-left: -1px; }
-  .logolist ul div {
-    float: left;
-    border: 1px solid #e5e5e5;
-    overflow: hidden;
-    width: 119px;
-    height: 120px;
-    margin: -1px 0 0 -1px; }
+  border: 1px solid #e5e5e5;
+}
+.logolist ul li {
+  width: 1200px;
+  overflow: hidden;
+  margin-left: -1px;
+}
+.logolist ul div {
+  float: left;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+  width: 119px;
+  height: 120px;
+  margin: -1px 0 0 -1px;
+}
 
+/* 引入底部样式 */
 /* 尾部 */
 footer {
   width: 100%;
   background: #fafafa;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
-  padding-top: 34px; }
-  footer .foot {
-    width: 1200px;
-    margin: 0 auto;
-    font-size: 12px; }
-    footer .foot .circle {
-      display: flex;
-      justify-content: space-around; }
-      footer .foot .circle .img {
-        float: left; }
-      footer .foot .circle .mess {
-        color: #777;
-        font-size: 12px;
-        float: left;
-        margin-left: 18px;
-        margin-top: 15px; }
-    footer .foot .code {
-      border-top: 1px solid #e5e5e5;
-      margin-top: 34px;
-      padding-top: 34px;
-      padding-bottom: 34px; }
-      footer .foot .code::after {
-        content: "";
-        height: 0;
-        display: block;
-        overflow: hidden;
-        visibility: hidden;
-        clear: both; }
-  footer .float {
-    float: left; }
-    footer .float .codeleft {
-      float: left; }
-      footer .float .codeleft img {
-        width: 120px;
-        height: 120px; }
-    footer .float .messright {
-      float: left;
-      width: 270px;
-      margin-left: 10px;
-      font-size: 12px; }
-      footer .float .messright h1 {
-        color: #333;
-        font-size: 22px;
-        padding-bottom: 5px; }
-      footer .float .messright p {
-        color: #666;
-        font-size: 14px;
-        line-height: 25px; }
+  padding-top: 34px;
+}
+footer .foot {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 12px;
+}
+footer .foot .circle {
+  display: flex;
+  justify-content: space-around;
+}
+footer .foot .circle .img {
+  float: left;
+}
+footer .foot .circle .mess {
+  color: #777;
+  font-size: 12px;
+  float: left;
+  margin-left: 18px;
+  margin-top: 15px;
+}
+footer .foot .code {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 34px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+footer .foot .code::after {
+  content: "";
+  height: 0;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
+footer .float {
+  float: left;
+}
+footer .float .codeleft {
+  float: left;
+}
+footer .float .codeleft img {
+  width: 120px;
+  height: 120px;
+}
+footer .float .messright {
+  float: left;
+  width: 270px;
+  margin-left: 10px;
+  font-size: 12px;
+}
+footer .float .messright h1 {
+  color: #333;
+  font-size: 22px;
+  padding-bottom: 5px;
+}
+footer .float .messright p {
+  color: #666;
+  font-size: 14px;
+  line-height: 25px;
+}
 
 .foot-bottom {
   padding-bottom: 36px;
-  background: #f5f5f5; }
-  .foot-bottom .contain {
-    width: 1200px;
-    margin: 0 auto;
-    font-size: 12px;
-    text-decoration: none; }
-    .foot-bottom .contain .contain-top {
-      height: 120px; }
-    .foot-bottom .contain .footnav {
-      text-align: center;
-      padding: 5px 0; }
-      .foot-bottom .contain .footnav a {
-        text-decoration: none;
-        color: #333; }
-      .foot-bottom .contain .footnav span {
-        margin: 0 3px 0 7px;
-        color: #333; }
-    .foot-bottom .contain .report {
-      text-align: center;
-      padding: 5px 0; }
-      .foot-bottom .contain .report a {
-        color: #666;
-        text-decoration: none; }
-      .foot-bottom .contain .report .ml30 {
-        margin-left: 30px; }
-    .foot-bottom .contain .copyright {
-      text-align: center;
-      padding: 5px 0;
-      color: #777; }
-      .foot-bottom .contain .copyright a {
-        color: #777;
-        text-decoration: none; }
-      .foot-bottom .contain .copyright a:hover {
-        color: red; }
+  background: #f5f5f5;
+}
+.foot-bottom .contain {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 12px;
+  text-decoration: none;
+}
+.foot-bottom .contain .contain-top {
+  height: 120px;
+}
+.foot-bottom .contain .footnav {
+  text-align: center;
+  padding: 5px 0;
+}
+.foot-bottom .contain .footnav a {
+  text-decoration: none;
+  color: #333;
+}
+.foot-bottom .contain .footnav span {
+  margin: 0 3px 0 7px;
+  color: #333;
+}
+.foot-bottom .contain .report {
+  text-align: center;
+  padding: 5px 0;
+}
+.foot-bottom .contain .report a {
+  color: #666;
+  text-decoration: none;
+}
+.foot-bottom .contain .report .ml30 {
+  margin-left: 30px;
+}
+.foot-bottom .contain .copyright {
+  text-align: center;
+  padding: 5px 0;
+  color: #777;
+}
+.foot-bottom .contain .copyright a {
+  color: #777;
+  text-decoration: none;
+}
+.foot-bottom .contain .copyright a:hover {
+  color: red;
+}
+
+/* 回到底部 */
+.scrollmenu {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  display: none;
+}
+.scrollmenu a {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/baseRedScrollBar.png");
+}
+.scrollmenu .feedBack {
+  margin-bottom: 10px;
+}
+.scrollmenu .feedBack a {
+  background-position: -50px -82px;
+}
+.scrollmenu .feedBack a:hover {
+  background-position: -50px 0px;
+}
+.scrollmenu .toTop a {
+  background-position: -50px -46px;
+}
+.scrollmenu .toTop a:hover {
+  background-position: -50px -130px;
+}
 
 /*# sourceMappingURL=index.css.map */

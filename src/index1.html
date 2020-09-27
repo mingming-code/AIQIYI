@@ -6,144 +6,16 @@
     <meta name="title" content="爱奇艺商城-购享娱乐" />
     <meta name="keywords" content="网上购物,网上商城,视频购物,明星服装,明星店铺,爱奇艺商城" />
     <meta name="description" content="爱奇艺商城是国内首家以影视剧为依托，提供热门的影视剧、动漫的明星服装，周边商品的在线购买服务；正品低价、配送及时、放心购物。" />
-    <link rel="icon" href="http://www.iqiyipic.com/common/images/logo.ico">
+    <!-- <link rel="icon" href="img/logo.ico"> -->
     <link rel="stylesheet" href="css/index.css">
+    <script src="script/require.js" data-main="script/main.js" id="currentpage"
+    data-page="index_module"></script>
     <title>我的爱奇艺</title>
 </head>
 
 <body>
-    <!-- 页面头部 -->
-    <header>
-        <!-- 头部上方 -->
-        <div class="head-top">
-            <!-- 头部版心 -->
-            <div class="head-top-area">
-                <ul class="left">
-                    <li>欢迎来到爱奇艺商城</li>
-                    <li class="login">
-                        <a href="">请登录</a>
-                    </li>
-                    <li class="register">
-                        <a href="">免费注册</a>
-                    </li>
-                </ul>
-
-                <ul class="right">
-                    <li class="first">
-                        <a href="">
-                            <i class="topNavCar"></i>
-                            购物车<span>0</span>件
-                        </a>
-
-                    </li>
-                    <li class="first">
-                        <a href="">
-                            <i class="topNav_icon1 myOrder_icon"></i>
-                            买家中心
-                        </a>
-                    </li>
-                    <li class="second">
-
-                        <a href="">
-                            <i class="topNav_icon2 myFavo_icon"></i>
-                            我的收藏
-                        </a>
-                    </li>
-                    <span class="line floatline"></span>
-                    <li class="second attActive">
-                        <span>
-                            <i class="topNav_icon2 watch_icon"></i>
-                            关注我们
-                            <i class="topNav_icon3 watchS_icon"></i>
-                        </span>
-                        <div class="attention">
-                            <img src="http://www.iqiyipic.com/common/fix/myCenter_images/mall_qrcodeNew.jpg" alt="">
-                            <div>
-                                <p>微信扫一扫</p>
-                                <p>了解商城动态</p>
-                            </div>
-                        </div>
-                    </li>
-                    <span class="line floatline"></span>
-                    <li class="second">
-                        <a href="">
-                            <i class="topNav_icon2 bus_icon"></i>
-                            商家中心
-                        </a>
-                    </li>
-                    <span class="line floatline"></span>
-                    <li class="first">
-                        <a href="">爱奇艺首页</a>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-        <!-- 头部下面 -->
-        <div class="head-bottom">
-            <div class="head-bottom-area">
-                <h1><a href="index1.html" title="爱奇艺商城">
-                        <img src="img/logo.png" alt="">
-                    </a>
-                </h1>
-                <div class="search">
-                    <p>
-                        <input type="text" name="" id="" placeholder="青春有你2">
-                        <button>搜 索</button>
-                    </p>
-                    <div>
-                        <a href="" style="color:#ee394b ;">青春有你2</a>
-                        <span class="line"></span>
-                        <a href="">鬓边不是海棠红</a>
-                        <span class="line"></span>
-                        <a href="">两世欢</a>
-                        <span class="line"></span>
-                        <a href="" style="color:#ee394b ;">有颜彩妆套盒</a>
-                        <span class="line"></span>
-                        <a href="">潮流合伙人</a>
-                    </div>
-                </div>
-                <!-- 头部右侧广告 右浮动 -->
-                <div class="head-btn">
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul>
-                    <li style="display: block">
-                        <a href="">
-                            <img src="http://pic1.iqiyipic.com/common/20200302/dff103ad6ecd4f73af2c4db3fc46fb9f.jpg"
-                                alt="">
-                            <div>
-                                <p>蓝牙戴头式耳机</p>
-                                <span>￥29.9限时特惠</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li style="display: none">
-                        <a href="">
-                            <img src="http://pic0.iqiyipic.com/common/20200302/8e6bf18b966347e4af513e79807e571c.jpg"
-                                alt="">
-                            <div>
-                                <p>智能运动手环</p>
-                                <span>微信来电提示</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </header>
-    <!-- 导航栏 -->
-    <nav>
-        <ul>
-            <li class="active"><a href="#">首页</a></li>
-            <li><a href="#">秒杀</a></li>
-            <li><a href="#">京东优选</a></li>
-            <li><a href="#">i71</a></li>
-            <li><a href="#">Apple</a></li>
-        </ul>
-    </nav>
+    <!-- 头部 -->
+  <div id="head"></div>
     <!-- 轮播图 -->
     <div class="banner">
         <ul>
@@ -161,11 +33,13 @@
             </li>
         </ul>
         <ol>
-            <li>1</li>
+            <li class="active">1</li>
             <li>2</li>
             <li>3</li>
             <li>4</li>
         </ol>
+        <a href="" class="left arrow"></a>
+        <a href="" class="right arrow"></a>
     </div>
     <!-- 广告图片 -->
     <div class="banner1">
@@ -194,48 +68,6 @@
             <div class="main-goods">
                 <!-- 每日精选商品列表（渲染） -->
                 <ul class="main-goods-list">
-                    <li>
-                        <a href="">
-                            <div>
-                                <img src="https://mall3.iqiyipic.com/mall/20181206/85/69/mall_5c0941f774d579560a1f8569_1x1.jpg"
-                                    alt="">
-                            </div>
-                            <p class="title">入耳式蓝牙耳机</p>
-                            <p>
-                                <span class="bgmess">迷你无线</span>
-                                <i class="des">自带充电仓</i>
-                            </p>
-                            <p class="pricemess">
-                                <span class="price">￥49.9</span>
-                                <span class="sail">已售<b class="sails">8030</b></span>
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div>
-                                <img src="https://mall8.iqiyipic.com/mall/20191010/ea/a1/mall_5d9ed107d2999d474daeeaa1_1x1.jpg"
-                                    alt="">
-                            </div>
-                            <p class="title">防水运动手环</p>
-                            <p>
-                                <span class="bgmess">彩屏智能</span>
-                                <i class="des">微信来电提醒</i>
-                            </p>
-                            <p class="pricemess">
-                                <span class="price">￥29.9</span>
-                                <span class="sail">已售<b class="sails">8030</b></span>
-                            </p>
-                        </a>
-                    </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
 
                 </ul>
             </div>
@@ -286,112 +118,71 @@
                                     alt="">
                             </a>
                         </li>
+                        <li>
+                            <a href="">
+                                <div class="showinfo">
+                                    <p class="infotitle">青春有你2</p>
+                                    <p class="infoprice">练习生的美颜宝典 请查收</p>
+                                </div>
+                                <img src="http://pic0.iqiyipic.com/common/20200514/e97798c056dc48ac8acd0819bcea75c7.jpg"
+                                    alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="showinfo">
+                                    <p class="infotitle">青春有你2</p>
+                                    <p class="infoprice">练习生的美颜宝典 请查收</p>
+                                </div>
+                                <img src="http://pic0.iqiyipic.com/common/20200514/e97798c056dc48ac8acd0819bcea75c7.jpg"
+                                    alt="">
+                            </a>
+                        </li>
                     </ul>
                 </div>
+                <!-- 热销榜单 -->
                 <div class="main-list-right">
+
                     <div class="rightlist">
                         <p class="sortTop">
                             <em></em>
                             <span>热销榜单</span>
                         </p>
-                        <ul class="sortlist">
-                            <li>
-                                <div>
-                                    <img class="img" src="https://mall1.iqiyipic.com/mall/20200309/08/e3/mall_5e66403a0adcdcded8fe08e3_1x1.jpg"
-                                        alt="">
-                                </div>
-                                <div class="sortright">
-                                    <h2></h2>
-                                    <p class="des">多口充电头5USB充电器头5Awww</p>
-                                    <p class="pricmess">
-                                        <span class="price">￥59.8</span>
-                                        <span>已售<span class="sail">771</span></span>
-                                    </p>
-                                </div>
-                            </li>
+                        <!-- 热销榜单列表 -->
+                        <ul class="sortlist sortlist1">
 
-                            <li>
-                                <div>
-                                    <img class="img" src="https://mall1.iqiyipic.com/mall/20200309/08/e3/mall_5e66403a0adcdcded8fe08e3_1x1.jpg"
-                                        alt="">
-                                </div>
-                                <div class="sortright">
-                                    <h2></h2>
-                                    <p class="des">漫威英雄无线游戏鼠标 办公室鼠标</p>
-                                    <p class="pricmess">
-                                        <span class="price">￥64</span>
-                                        <span>已售<span class="sail">535</span></span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <img class="img" src="https://mall1.iqiyipic.com/mall/20200309/08/e3/mall_5e66403a0adcdcded8fe08e3_1x1.jpg"
-                                        alt="">
-                                </div>
-                                <div class="sortright">
-                                    <h2></h2>
-                                    <p class="des">漫威英雄无线游戏鼠标 办公室鼠标</p>
-                                    <p class="pricmess">
-                                        <span class="price">￥64</span>
-                                        <span>已售<span class="sail">535</span></span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <img class="img" src="https://mall1.iqiyipic.com/mall/20200309/08/e3/mall_5e66403a0adcdcded8fe08e3_1x1.jpg"
-                                        alt="">
-                                </div>
-                                <div class="sortright">
-                                    <h2></h2>
-                                    <p class="des">漫威英雄无线游戏鼠标 办公室鼠标</p>
-                                    <p class="pricmess">
-                                        <span class="price">￥64</span>
-                                        <span>已售<span class="sail">535</span></span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <img class="img" src="https://mall1.iqiyipic.com/mall/20200309/08/e3/mall_5e66403a0adcdcded8fe08e3_1x1.jpg"
-                                        alt="">
-                                </div>
-                                <div class="sortright">
-                                    <h2></h2>
-                                    <p class="des">漫威英雄无线游戏鼠标 办公室鼠标</p>
-                                    <p class="pricmess">
-                                        <span class="price">￥64</span>
-                                        <span>已售<span class="sail">535</span></span>
-                                    </p>
-                                </div>
-                            </li>
+
                         </ul>
                     </div>
+                    <!-- 热门推荐 -->
                     <div class="rightlist">
                         <p class="sortTop">
                             <em></em>
                             <span>热门推荐</span>
                         </p>
                         <!-- 热门推荐列表 -->
-                        <ul class="sortlist recommend">
+                        <ul class="sortlist recommend sortlist2">
                             <li>
-                                <img src="http://pic2.iqiyipic.com/common/20200302/ea0f19d6273c41279ee8440293c83ab4.jpg" alt="">
+                                <img src="http://pic2.iqiyipic.com/common/20200302/ea0f19d6273c41279ee8440293c83ab4.jpg"
+                                    alt="">
                                 <p class="title1">攀登者</p>
                                 <p class="title2">无畏风雪 全面开售</p>
                             </li>
                             <li>
-                                <img src="http://pic2.iqiyipic.com/common/20200302/98797ec1e762426d9f1658f6c1b444c8.jpg" alt="">
+                                <img src="http://pic2.iqiyipic.com/common/20200302/98797ec1e762426d9f1658f6c1b444c8.jpg"
+                                    alt="">
                                 <p class="title1">飞行少年</p>
                                 <p class="title2">壮志凌云 逆风而上</p>
                             </li>
                             <li>
-                                <img src="http://pic3.iqiyipic.com/common/20190311/c0636ddcff28471596d483258aa45622.jpg" alt="">
+                                <img src="http://pic3.iqiyipic.com/common/20190311/c0636ddcff28471596d483258aa45622.jpg"
+                                    alt="">
                                 <p class="title1">惊奇队长正版周边</p>
                                 <p class="title2">4折起火爆开抢</p>
                             </li>
                             <li>
-                                <img src="http://pic1.iqiyipic.com/common/20180815/580fd71ded604b9389e1f1b94ec0171a.jpg" alt="">
+                                <img src="http://pic1.iqiyipic.com/common/20180815/580fd71ded604b9389e1f1b94ec0171a.jpg"
+                                    alt="">
                                 <p class="title1">豆瓣电影TOP50精彩</p>
                                 <p class="title2">回味人生 经典必读</p>
                             </li>
@@ -453,137 +244,8 @@
 
         </div>
     </div>
-    <!-- 页尾 -->
-    <footer>
-        <div class="foot">
-            <div class="circle">
-                <!-- 页尾的圆形图标 -->
-                <div>
-                    <div class="img">
-                        <img src="http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/footer_redzhengLogo.png" alt="">
-                    </div>
-
-                    <div class="mess">
-                        <p>全球精选</p>
-                        <p>品质保障</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="img">
-                        <img src="http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/footer_redmoneyLogo.png" alt="">
-                    </div>
-
-                    <div class="mess">
-                        <p>限时特卖</p>
-                        <p>甄选好货</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="img">
-                        <img src="http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/footer_redgoodLogo.png" alt="">
-                    </div>
-
-                    <div class="mess">
-                        <p>爱奇艺电商</p>
-                        <p>口碑推荐</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="img">
-                        <img src="http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/footer_redvideoLogo.png" alt="">
-                    </div>
-
-                    <div class="mess">
-                        <p>直播购物</p>
-                        <p>看好就买</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="img">
-                        <img src="http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/footer_redcollectLogo.png" alt="">
-                    </div>
-
-                    <div class="mess">
-                        <p>热剧同款</p>
-                        <p>必追单品</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 底部二维码 -->
-            <div class="code">
-                <div class="float ">
-                    <div class="codeleft">
-                        <img src="http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/iqiyi_mall_code.png" alt="">
-                    </div>
-                    <div class="messright">
-                        <h1>爱奇艺商城手机版</h1>
-                        <p>爱奇艺商城-购享娱乐</p>
-                        <p>精彩在手，说有就有</p>
-                        <p>手机购物更方便</p>
-                    </div>
-                </div>
-                <div class="float ">
-                    <div class="codeleft">
-                        <img src="http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/iqiyi_mall_code.png" alt="">
-                    </div>
-                    <div class="messright">
-                        <h1>爱奇艺商城微信</h1>
-                        <p>关注微信</p>
-                        <p>提前了解爱奇艺商城</p>
-                        <p>最新资讯</p>
-                    </div>
-                </div>
-                <div class="float ">
-                    <div class="codeleft">
-                        <img src="http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/iqiyi_mall_code.png" alt="">
-                    </div>
-                    <div class="messright">
-                        <h1>爱奇艺商城微信（订阅号）</h1>
-                        <p>关注微信订阅号</p>
-                        <p>订阅一种生活方式</p>
-                        <p>发现时尚趣味</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </footer>
-    <div class="foot-bottom">
-        <div class="contain">
-            <div class="contain-top"></div>
-            <div class="footnav">
-                <a href="">公司介绍</a><span>|</span>
-                <a href="">新闻动态</a><span>|</span>
-                <a href="">联系方式</a><span>|</span>
-                <a href="">招聘英才</a><span>|</span>
-                <a href="">爱奇艺实验室</a><span>|</span>
-                <a href="">开放平台</a><span>|</span>
-                <a href="">爱奇艺内容合作标准</a><span>|</span>
-                <a href="">爱奇艺号</a><span>|</span>
-                <a href="">安全应急响应中心</a><span>|</span>
-                <a href="">帮助中心</a><span>|</span>
-                <a href="">侵权投诉</a>
-            </div>
-            <div class="report">
-                <a href="">中国互联网举报中心</a>
-                <a href="" class="ml30">网络举报APP下载</a>
-                <a href="" class="ml30">网上有害信息举报专区</a>
-                <a href="" class="ml30">网上暴恐有害信息举报</a>
-                <a href="" class="ml30">儿童色情信息举报专区</a>
-                <span class="ml30">违法和不良信息举报电话： 400-923-7171</span>
-                <span class="ml30">举报邮箱： jubao365@qiyi.com</span>
-            </div>
-            <div class="copyright">
-                <a href="">反盗版和反盗链权利声明</a>
-                Copyright &copy; 2020 <a href="">爱奇艺</a>
-                All Rights Reserved
-            </div>
-        </div>
-    </div>
+   <!-- 页尾 -->
+   <div id="foot"></div>
 </body>
-<script>
-
-</script>
 
 </html>

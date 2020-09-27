@@ -1,0 +1,179 @@
+@charset "utf-8";
+/* 尾部 */
+footer {
+    width: 100%;
+    background: #fafafa;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding-top: 34px;
+
+    .foot {
+        width: $typeArea;
+        margin: 0 auto;
+        font-size: 12px;
+
+        .circle {
+            display: flex;
+            justify-content: space-around;
+
+            .img {
+                float: left;
+            }
+
+            .mess {
+                color: #777;
+                font-size: 12px;
+                float: left;
+                margin-left: 18px;
+                margin-top: 15px;
+            }
+        }
+
+        .code {
+            border-top: 1px solid #e5e5e5;
+            margin-top: 34px;
+            padding-top: 34px;
+            padding-bottom: 34px;
+
+            &::after {
+                @include clearfix()
+            }
+
+        }
+    }
+
+    .float {
+        float: left;
+
+        .codeleft {
+            float: left;
+
+            img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        .messright {
+            float: left;
+            width: 270px;
+            margin-left: 10px;
+            font-size: 12px;
+
+            h1 {
+                color: #333;
+                font-size: 22px;
+                padding-bottom: 5px;
+            }
+
+            p {
+                color: #666;
+                font-size: 14px;
+                line-height: 25px
+            }
+
+        }
+    }
+
+
+}
+
+.foot-bottom {
+
+    padding-bottom: 36px;
+    background: #f5f5f5;
+
+    .contain {
+        width: $typeArea;
+        margin: 0 auto;
+        font-size: 12px;
+        text-decoration: none;
+
+        .contain-top {
+            height: 120px;
+        }
+
+        .footnav {
+            text-align: center;
+            padding: 5px 0;
+
+            a {
+                text-decoration: none;
+                color: #333;
+
+            }
+
+            span {
+
+                margin: 0 3px 0 7px;
+                color: #333;
+            }
+        }
+
+        .report {
+            text-align: center;
+            padding: 5px 0;
+
+            a {
+                color: #666;
+                text-decoration: none;
+            }
+
+            .ml30 {
+                margin-left: 30px;
+            }
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 5px 0;
+            color: #777;
+
+            a {
+                color: #777;
+                text-decoration: none;
+
+            }
+
+            a:hover {
+                color: red;
+            }
+        }
+    }
+}
+
+/* 回到底部 */
+.scrollmenu {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    display: none;
+    a {
+        display: block;
+        width: 36px;
+        height: 36px;
+        background: url('http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/baseRedScrollBar.png');
+    }
+
+    .feedBack {
+        margin-bottom: 10px;
+
+        a {
+            background-position: -50px -82px;
+        }
+
+        a:hover {
+            background-position: -50px 0px;
+        }
+    }
+
+    .toTop {
+        a {
+            background-position: -50px -46px;
+        }
+
+        a:hover {
+            background-position: -50px -130px;
+        }
+    }
+}
