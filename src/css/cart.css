@@ -109,7 +109,7 @@ header .floatline {
 .head-top .right .topNav_icon2,
 .head-top .right .topNav_icon3,
 .head-top .right .topNavCar {
-  background-image: url(http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/topMenu_redicon.png);
+  background-image: url(../img/topMenu_redicon.png);
   background-repeat: no-repeat;
 }
 .head-top .right .myOrder_icon {

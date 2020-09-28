@@ -109,7 +109,7 @@ header .floatline {
 .head-top .right .topNav_icon2,
 .head-top .right .topNav_icon3,
 .head-top .right .topNavCar {
-  background-image: url(http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/topMenu_redicon.png);
+  background-image: url(../img/topMenu_redicon.png);
   background-repeat: no-repeat;
 }
 .head-top .right .myOrder_icon {
@@ -315,7 +315,12 @@ nav .active {
 /*  轮播图 */
 .banner {
   position: relative;
+  height: 400px;
   /* 轮播图左右箭头 */
+}
+.banner ul {
+  width: 100%;
+  height: 100%;
 }
 .banner .arrow {
   width: 66px;
@@ -323,14 +328,15 @@ nav .active {
   position: absolute;
   top: 50%;
   margin-top: -35px;
+  opacity: 0;
 }
 .banner .left {
-  background: url("http://www.iqiyipic.com/common/fix/PCIndex/images/new_focus_prev.png") no-repeat 0 0;
+  background: url("../img/new_focus_prev.png") no-repeat 0 0;
   left: 50%;
   margin-left: -600px;
 }
 .banner .right {
-  background: url("http://www.iqiyipic.com/common/fix/PCIndex/images/new_focus_next.png") no-repeat 0 0;
+  background: url("../img/new_focus_next.png") no-repeat 0 0;
   right: 50%;
   margin-right: -600px;
 }
@@ -356,12 +362,17 @@ nav .active {
 }
 
 .banner ul li {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
 }
 .banner ul li a {
   display: block;
   height: 400px;
-  background: url("http://pic0.iqiyipic.com/common/20200304/512956b04fe9447db308928593a5ae93.jpg") no-repeat center center;
+}
+
+.banner li:nth-child(1) a {
+  background-image: url("http://pic0.iqiyipic.com/common/20200304/512956b04fe9447db308928593a5ae93.jpg");
 }
 
 .banner li:nth-child(2) a {

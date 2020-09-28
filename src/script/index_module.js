@@ -2,12 +2,53 @@
 define([], function () {
     return {
         init: function () {
-
-            // 头部HTML加载
             $(document).ready(function () {
-                $("#head").load("head.html")
-                $("#foot").load("foot.html")
+                // 头部HTML加载
+                $("#head").load("head.html", function () {
+                    // 异步的,头部加载成功后执行头部轮播的代码
+                    // 头部广告轮播
+                    let $lunboli = $(".lunbo li");
+                    let $left = $(".head-btn .left");
+                    let $right = $(".head-btn .right");
+                    let length = $lunboli.size();
+                    let count = 1;
+                    let timer = null;
+
+                    function tabswitch() {
+                        if (count > length - 1) {
+                            count = 0
+                        }
+                        if (count < 0) {
+                            count = length - 1;
+                        }
+                        $lunboli.eq(count).show().siblings().hide()
+                    }
+
+                    $right.on("click", function () {
+                        tabswitch();
+                        count++;
+                    })
+                    $left.on("click", function () {
+                        console.log("左")
+                        tabswitch();
+                        count--;
+                    })
+                    timer = setInterval(function () {
+                        tabswitch()
+                        count++;
+                    }, 3000)
+                    $(".head-btn,.lunbo").hover(function () {
+                        clearInterval(timer)
+                    }, function () {
+                        timer = setInterval(function () {
+                            tabswitch()
+                            count++;
+                        }, 2000)
+                    })
+                })
+                $("#foot").load("foot.html");
             });
+
             //数据渲染
             ! function () {
                 $.ajax({
@@ -39,7 +80,8 @@ define([], function () {
                                 <span class="sail">已售<b class="sails">${value.sailnumber}</b></span>
                             </p>
                         </a>
-                    </li>  `
+                    </li> 
+                     `
                         if (index < 5) {
                             $srchtml2 += `
                         <li>
@@ -66,47 +108,9 @@ define([], function () {
                 })
             }()
 
-            // 头部广告轮播
-            let $lunboli = $(".lunbo li");
-            let $left = $(".head-btn .left");
-            let $right = $(".head-btn .right");
-            let length = $lunboli.size();
-            let count = 1;
-            let timer = null;
-
-            function tabswitch() {
-                if (count > length - 1) {
-                    count = 0
-                }
-                if (count < 0) {
-                    count = length - 1;
-                }
-                $lunboli.eq(count).show().siblings().hide()
-            }
-            $right.on("click", function () {
-                tabswitch();
-                count++;
-            })
-            $left.on("click", function () {
-                tabswitch();
-                count--;
-            })
-            timer = setInterval(function () {
-                tabswitch()
-                count++;
-            }, 3000)
-            $(".head-btn,.lunbo").hover(function () {
-                clearInterval(timer)
-            }, function () {
-                timer = setInterval(function () {
-                    tabswitch()
-                    count++;
-                }, 3000)
-            })
             // 导航栏样式切换
             $navli = $("nav ul li");
             $navli.on("click", function () {
-                console.log($(this).html())
                 $(this).addClass("active").siblings().removeClass("active")
             })
             // 回到底部
@@ -131,6 +135,54 @@ define([], function () {
                 $top = $(window).scrollTop();
                 showtop()
             })
+            // banner轮播图
+            let $banner = $(".banner")
+            let $leftarrow = $(".banner .left");
+            let $rightarrow = $(".banner .right");
+            let $circle = $(".banner ol li"); //轮播图下面的小圆圈
+            let $liimg = $(".banner ul li") //轮播图图片
+            let cirindex = 0;
+            let timer1 = null;
+            $banner.hover(function () {
+                $(".arrow").stop().animate({
+                    "opacity": 0.7
+                }, 800);
+                clearInterval(timer1)
+            }, function () {
+                $(".arrow").stop().animate({
+                    "opacity": 0
+                }, 800);
+                timer1 = setInterval(function () {
+                    $rightarrow.click()
+                }, 1000)
+            })
+            $rightarrow.on("click", function () {
+                cirindex++;
+                tabswitch1();
+            });
+            $leftarrow.on("click", function () {
+                cirindex--;
+                tabswitch1()
+            });
+            timer1 = setInterval(function () {
+                $rightarrow.click()
+            }, 1000)
+            // 封装轮播图切换
+            function tabswitch1() {
+                if (cirindex > $circle.size() - 1) {
+                    cirindex = 0;
+                };
+                if (cirindex < 0) {
+                    cirindex = $circle.size() - 1;
+                }
+                $liimg.stop().animate({
+                    "opacity": 0
+                })
+                $liimg.eq(cirindex).stop().animate({
+                    "opacity": 1
+                })
+                $circle.eq(cirindex).addClass("active").siblings("li").removeClass("active");
+            }
         }
     }
 })

@@ -6,6 +6,12 @@
 /*  轮播图 */
 .banner {
     position: relative;
+    height: 400px;
+
+    ul {
+        width: 100%;
+        height: 100%;
+    }
 
     /* 轮播图左右箭头 */
     .arrow {
@@ -14,16 +20,17 @@
         position: absolute;
         top: 50%;
         margin-top: -35px;
+        opacity: 0;
     }
 
     .left {
-        background: url('http://www.iqiyipic.com/common/fix/PCIndex/images/new_focus_prev.png') no-repeat 0 0;
+        background: url('../img/new_focus_prev.png') no-repeat 0 0;
         left: 50%;
         margin-left: -600px;
     }
 
     .right {
-        background: url('http://www.iqiyipic.com/common/fix/PCIndex/images/new_focus_next.png') no-repeat 0 0;
+        background: url('../img/new_focus_next.png') no-repeat 0 0;
         right: 50%;
         margin-right: -600px;
     }
@@ -44,6 +51,7 @@
         float: left;
         margin: 0 6px;
         text-indent: -9999px;
+
     }
 
     .active {
@@ -52,14 +60,20 @@
 }
 
 .banner ul li {
-
-    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
 
     a {
         display: block;
         height: 400px;
-        background: url('http://pic0.iqiyipic.com/common/20200304/512956b04fe9447db308928593a5ae93.jpg') no-repeat center center;
+    }
 
+}
+
+.banner li:nth-child(1) {
+    a {
+        background-image: url('http://pic0.iqiyipic.com/common/20200304/512956b04fe9447db308928593a5ae93.jpg') ;
     }
 
 }
@@ -528,5 +542,6 @@
     }
 
 }
+
 /* 引入底部样式 */
 @import "foot"
