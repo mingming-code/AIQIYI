@@ -73,7 +73,7 @@
 
 .banner li:nth-child(1) {
     a {
-        background-image: url('http://pic0.iqiyipic.com/common/20200304/512956b04fe9447db308928593a5ae93.jpg') ;
+        background-image: url('http://pic0.iqiyipic.com/common/20200304/512956b04fe9447db308928593a5ae93.jpg');
     }
 
 }
@@ -204,15 +204,17 @@
                     height: 257px;
                 }
 
-                a {
-                    display: block;
-                }
+            }
+            //悬停图片变大
+            li:hover img {
+                transform: scale(1.2);
             }
         }
 
         .main-goods-list {
             a {
                 padding: 15px;
+                display: block;
 
                 div {
                     text-align: center;
@@ -221,6 +223,7 @@
                 img {
                     width: 140px;
                     height: 140px;
+                    transition: 1s;
                 }
             }
 

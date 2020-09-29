@@ -52,7 +52,7 @@ define([], function () {
             //数据渲染
             ! function () {
                 $.ajax({
-                    url: "http://localhost/AIQIYI/php/aiqiyi.php",
+                    url: "http://localhost/AIQIYI/php/index.php",
                     dataType: "json",
                 }).done(function (data) {
                     console.log(data)

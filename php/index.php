@@ -10,4 +10,4 @@ for ($i = 0; $i < $result->num_rows; $i++) {
 echo json_encode($arr);
 
 // 接口地址
-//http://localhost/AIQIYI/php/aiqiyi.php
+//http://192.168.13.6/AIQIYI/php/index.php

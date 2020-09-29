@@ -482,11 +482,12 @@ nav .active {
   width: 239px;
   height: 257px;
 }
-.daily .main .main-goods ul a {
-  display: block;
+.daily .main .main-goods li:hover img {
+  transform: scale(1.2);
 }
 .daily .main .main-goods-list a {
   padding: 15px;
+  display: block;
 }
 .daily .main .main-goods-list a div {
   text-align: center;
@@ -494,6 +495,7 @@ nav .active {
 .daily .main .main-goods-list a img {
   width: 140px;
   height: 140px;
+  transition: 1s;
 }
 .daily .main .main-goods-list .title {
   color: #333;

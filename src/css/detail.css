@@ -320,6 +320,57 @@ nav .active {
   height: 100%;
   background: #000;
 }
+.fixedmenu .icon {
+  height: 23px;
+  background: url(//www.iqiyipic.com/common/fix/iqiyi_shop_images/toolbar_linkIcon.png) no-repeat;
+  background-origin: content-box;
+  padding: 0 10px 15px;
+  margin-top: 100px;
+}
+.fixedmenu .shoppingcar {
+  border-top: 1px dotted #5e5e5e;
+  border-bottom: 1px dotted #5e5e5e;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+.fixedmenu .shoppingcar i {
+  border: solid 6px;
+  border-color: transparent transparent transparent #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: none;
+}
+.fixedmenu .shoppingcar:hover {
+  background: #ee394b;
+}
+.fixedmenu .shoppingcar:hover i {
+  display: block;
+}
+.fixedmenu .shoppingcar:hover .buynum {
+  background: #fff;
+  color: #ee394b;
+}
+.fixedmenu .shoppingcar li {
+  height: 20px;
+  line-height: 16px;
+}
+.fixedmenu .shoppingcar .bgcar {
+  background: url("../img/detail_icon4.png") 2px -20px;
+  margin-bottom: 5px;
+}
+.fixedmenu .shoppingcar .buynum {
+  width: 20px;
+  line-height: 20px;
+  border-radius: 10px;
+  background: #ee394b;
+  margin-top: 33px;
+  margin-left: 2px;
+}
 
 .main {
   width: 1200px;
@@ -372,11 +423,12 @@ nav .active {
   display: block;
 }
 .mainContent .sf {
-  background: orange;
-  opacity: 0.5;
   position: absolute;
   left: 0;
   top: 0;
+  width: 220px;
+  height: 220px;
+  background: url("../img/image_zoom.png");
   display: none;
   cursor: move;
 }
@@ -388,15 +440,19 @@ nav .active {
   display: none;
   position: absolute;
   left: 428px;
+  z-index: 1;
 }
 .mainContent .df img {
   position: absolute;
   display: block;
+  width: 600px;
+  height: 600px;
 }
 .mainContent .des {
   float: left;
   margin-left: 20px;
-  width: 759px;
+  width: 749px;
+  font-size: 12px;
 }
 .mainContent .des p {
   white-space: nowrap;
@@ -411,28 +467,108 @@ nav .active {
 .mainContent .des .xtitle {
   color: #ee394b;
   font-size: 14px;
-  width: 100%;
   margin-bottom: 20px;
 }
 .mainContent .des .detailPrice {
   padding: 15px 20px;
   background: url(//www.iqiyipic.com/common/fix/qy_shop/detail-priceBg.png) no-repeat;
   color: #777;
-  overflow: hidden;
   background-size: cover;
 }
 .mainContent .des .detailPrice label {
   line-height: 50px;
-  font-size: 12px;
+  color: #777;
+  vertical-align: top;
+  margin-right: 10px;
+}
+.mainContent .des .detailPrice em,
+.mainContent .des .detailPrice span {
+  vertical-align: bottom;
+  color: #ee394b;
+  line-height: 40px;
+  margin-left: -7px;
+}
+.mainContent .des .detailPrice em {
+  font-size: 20px;
+  font-style: normal;
+}
+.mainContent .des .detailPrice span {
+  font-size: 30px;
+}
+.mainContent .des .detailsail {
+  overflow: hidden;
+  padding: 15px 0 10px 0;
+  border-bottom: 1px dotted #c8c8c8;
+  text-align: center;
+}
+.mainContent .des .detailsail .sailnum,
+.mainContent .des .detailsail .evanum {
+  color: #c00;
+}
+.mainContent .des .detailsail .sailmess {
+  float: left;
+  width: 100px;
+}
+.mainContent .des .detailsail .evaluate {
+  float: left;
+  width: 100px;
+  border-left: 1px solid #ccc;
+}
+.mainContent .des .info {
+  margin: 20px 0 0 20px;
+}
+.mainContent .des .info .label {
+  width: 66px;
   color: #777;
 }
-.mainContent .des .detailPrice .symbol {
-  color: #ee394b;
-  font-size: 20px;
+.mainContent .des .info div {
+  margin-bottom: 10px;
 }
-.mainContent .des .detailPrice .price {
-  color: #ee394b;
-  font-size: 30px;
+.mainContent .des .info input {
+  width: 58px;
+  height: 28px;
+  margin-right: 2px;
+  border: 1px solid #999;
+  line-height: 28px;
+  text-align: center;
+  font-size: 12px;
+  color: #3c3c3c;
+  outline: none;
+  vertical-align: top;
+}
+.mainContent .des .info .buyit {
+  margin-top: 30px;
+}
+.mainContent .des .info .immediately,
+.mainContent .des .info .join {
+  width: 148px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  vertical-align: middle;
+  border-radius: 2px;
+  background-color: #ee394b;
+}
+.mainContent .des .info .immediately {
+  float: left;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.mainContent .des .info .join {
+  float: left;
+  position: relative;
+  cursor: pointer;
+}
+.mainContent .des .info .join::after {
+  content: " ";
+  background: url("../img/detail_icon4.png") 12px -12px;
+  width: 30px;
+  height: 27px;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
 }
 
 /* 引入底部样式 */

@@ -462,6 +462,9 @@ section {
   margin-left: 5px;
   background: url(../img/detail_icon4.png) -60px -20px no-repeat;
 }
+.head li:nth-child(2) i {
+  background: url(../img/detail_icon4.png) -80px -20px no-repeat;
+}
 .head span {
   display: inline-block;
   padding: 0 15px 0 15px;
@@ -559,6 +562,80 @@ section {
   margin-top: 5px;
   font-size: 12px;
   color: #999;
+}
+
+/* 底部分页 */
+.paging {
+  margin-bottom: 50px;
+  font-size: 12px;
+}
+.paging::after {
+  content: "";
+  height: 0;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
+.paging .pagelist {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.paging .pagelist .listyle {
+  float: right;
+  text-align: center;
+  /* 上一页，下一页 */
+}
+.paging .pagelist .listyle span,
+.paging .pagelist .listyle a,
+.paging .pagelist .listyle input {
+  float: left;
+  margin: 0 5px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  color: #777;
+}
+.paging .pagelist .listyle a {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 3px;
+}
+.paging .pagelist .listyle .active {
+  background-color: #ee394b;
+  color: #e7e7e7;
+}
+.paging .pagelist .listyle a:hover {
+  border: 1px solid #cc0e2b;
+}
+.paging .pagelist .listyle .next,
+.paging .pagelist .listyle .prev {
+  width: 58px;
+}
+.paging .pagelist .listyle:before,
+.paging .pagelist .listyle:after {
+  content: "";
+  display: table;
+}
+.paging .pagelist .listyle:after {
+  clear: both;
+  overflow: hidden;
+}
+.paging .pagelist .now,
+.paging .pagelist .count {
+  padding: 0 5px;
+  color: #f00;
+}
+.paging .pagelist .eg img {
+  max-width: 800px;
+  min-height: 500px;
+}
+.paging .pagelist input {
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  outline: none;
 }
 
 /* 引入底部样式 */
