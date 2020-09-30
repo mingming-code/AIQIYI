@@ -17,13 +17,15 @@
   <div class="fixedmenu">
     <div class="icon">
     </div>
-    <ul class="shoppingcar">
-      <li class="bgcar"></li>
-      <li>购物车</li>
-      <li class="buynum">0</li>
-      <!-- //小箭头 -->
-      <i></i>
-    </ul>
+    <a href="cart.html">
+      <ul class="shoppingcar">
+        <li class="bgcar"></li>
+        <li>购物车</li>
+        <li class="buynum">0</li>
+        <!-- //小箭头 -->
+        <i></i>
+      </ul>
+    </a>
   </div>
   <!-- 头部 -->
   <div id="head"></div>
@@ -56,14 +58,19 @@
             <!-- 小放 -->
             <div class="sf"></div>
           </div>
+          <div class="piclist">
+            <ul>
+
+            </ul>
+          </div>
           <!-- 放大的图 -->
           <div class="df">
             <!-- 大放 -->
             <img src="" alt="" class="bigimg">
             <!-- 大图 -->
           </div>
-
         </div>
+
         <!-- 商品图片右边的信息 -->
         <div class="des">
           <p class="title">
@@ -108,7 +115,15 @@
   </div>
   <!-- 页尾 -->
   <div id="foot"></div>
-
+  <!-- 加入购物车的遮罩 -->
+  <div class="shadow">
+  </div>
+  <div class="showinfo">
+    <div class="red">信息提示
+      <a href="javascript:;" class="close">X</a>
+    </div>
+    <div class="detail">商品已成功加入购物车！<a href="cart.html" class="orange">查看购物车</a></div>
+  </div>
 </body>
 
 </html>

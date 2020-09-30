@@ -2,26 +2,146 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="title" content="爱奇艺商城-购享娱乐" />
-    <meta name="keywords" content="网上购物,网上商城,视频购物,明星服装,明星店铺,爱奇艺商城" />
-    <meta name="description" content="爱奇艺商城是国内首家以影视剧为依托，提供热门的影视剧、动漫的明星服装，周边商品的在线购买服务；正品低价、配送及时、放心购物。" />
-    <!-- <link rel="icon" href="img/logo.ico"> -->
-    <link rel="stylesheet" href="css/cart.css">
-    <script src="script/require.js" data-main="script/main.js" id="currentpage"
-    data-page="cart_module"></script>
-    <title>购物车</title>
+  <meta charset="UTF-8">
+  <meta name="title" content="爱奇艺商城-购享娱乐" />
+  <meta name="keywords" content="网上购物,网上商城,视频购物,明星服装,明星店铺,爱奇艺商城" />
+  <meta name="description" content="爱奇艺商城是国内首家以影视剧为依托，提供热门的影视剧、动漫的明星服装，周边商品的在线购买服务；正品低价、配送及时、放心购物。" />
+  <!-- <link rel="icon" href="img/logo.ico"> -->
+  <link rel="stylesheet" href="css/cart.css">
+  <script src="script/require.js" data-main="script/main.js" id="currentpage" data-page="cart_module"></script>
+  <title>购物车</title>
 </head>
 
 <body>
-     <!-- 头部 -->
-     <div id="head"></div>
+  <header>
+    <!-- 头部上方 -->
+    <div class="head-top">
+      <!-- 头部版心 -->
+      <div class="head-top-area">
+        <ul class="left">
+          <li>欢迎来到爱奇艺商城</li>
+          <li class="login">
+            <a href="">请登录</a>
+          </li>
+          <li class="register">
+            <a href="">免费注册</a>
+          </li>
+        </ul>
 
-     <div>这里是主内容</div>
+        <ul class="right">
+          <li class="first">
+            <a href="" class="carli">
+              <i class="topNavCar"></i>
+              购物车<span>0</span>件
+            </a>
 
+          </li>
+          <li class="first">
+            <a href="" class="myOrdrli">
+              <i class="topNav_icon1 myOrder_icon"></i>
+              买家中心
+            </a>
+          </li>
+          <li class="second">
 
-     <!-- 页尾 -->
-   <div id="foot"></div>
+            <a href="" class="myFavoli">
+              <i class="topNav_icon2 myFavo_icon"></i>
+              我的收藏
+            </a>
+          </li>
+          <span class="line floatline"></span>
+          <li class="second attActive">
+            <span>
+              <i class="topNav_icon2 watch_icon"></i>
+              关注我们
+              <i class="topNav_icon3 watchS_icon"></i>
+            </span>
+            <div class="attention">
+              <img src="http://www.iqiyipic.com/common/fix/myCenter_images/mall_qrcodeNew.jpg" alt="">
+              <div>
+                <p>微信扫一扫</p>
+                <p>了解商城动态</p>
+              </div>
+            </div>
+          </li>
+          <span class="line floatline"></span>
+          <li class="second">
+            <a href="" class="busli">
+              <i class="topNav_icon2 bus_icon"></i>
+              商家中心
+            </a>
+          </li>
+          <span class="line floatline"></span>
+          <li class="first">
+            <a href="">爱奇艺首页</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    <!-- 头部下面 -->
+    <div class="head-bottom">
+      <div class="head-bottom-area">
+        <h1><a href="index1.html" title="爱奇艺商城">
+            <img src="img/logo.png" alt="">
+          </a>
+        </h1>
+        <div class="head-right">
+          <ul>
+            <li>查看购物车</li>
+            <li>确认订单信息</li>
+            <li>买家付款</li>
+            <li>交易成功</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <div id="container" class="cart">
+    <div class="w">
+      <!--我的购物车-->
+      <div class="cart-top">
+        <h1>
+          我的购物车
+        </h1>
+      </div>
+      <!-- 购物车主体 -->
+      <div class="main">
+        <!-- 上面的导航 -->
+        <div class="order-top">
+             <ul>
+               <li><input type="checkbox" class="qx">&nbsp;&nbsp;&nbsp;全选</li>
+               <li>商品信息</li>
+               <li>单价（元）</li>
+               <li>数量</li>
+               <li>实付款（元）</li>
+               <li>交易操作</li>
+             </ul>
+        </div>
+        <!-- 商品列表 -->
+        <div class="goodslist">
+              <div class="shoptitledes">
+                <input type="checkbox" class="checkbox">&nbsp;&nbsp;&nbsp;
+                <i></i>
+                <span>由<span class="shoptitle">钟情旗舰店</span>发货</span>
+              </div>
+              <div class="goodsdetail">
+                <input type="checkbox" class="checkbox">
+                <a href="detail.html?sid=1">
+                  <img src="img/logo1.jpg" alt="">
+                </a>
+              </div>
+        </div>
+        <!-- 下面的导航 -->
+        <div class="order-bottom"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 页尾 -->
+  <div id="foot"></div>
 </body>
 
 </html>

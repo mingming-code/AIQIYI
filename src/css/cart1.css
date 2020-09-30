@@ -312,6 +312,142 @@ nav .active {
   font-weight: bold;
 }
 
+/* 购物车版心 */
+.head-top .head-top-area,
+.head-bottom .head-bottom-area {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.head-bottom-area {
+  height: 90px;
+}
+
+.head-right {
+  float: right;
+}
+.head-right ul li {
+  float: left;
+}
+
+/* 购物车主体样式 */
+#container {
+  border-top: 1px solid #e7e7e7;
+  background: #fafafa;
+  padding-bottom: 50px;
+}
+
+.w {
+  width: 938px;
+  margin: 0 auto;
+  border: 1px solid #e7e7e7;
+  background: #fff;
+  padding: 20px;
+  color: #777;
+  font-size: 12px;
+}
+
+.cart-top {
+  height: 38px;
+  line-height: 35px;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 16px;
+}
+.cart-top h1 {
+  font-size: 14px;
+  color: #3c3c3c;
+  border-bottom: 2px solid #ee394b;
+  float: left;
+  line-height: 36px;
+}
+
+/* 列表上面的导航 */
+.order-top {
+  border: 1px solid #e7e7e7;
+  background: #f7f7f7;
+  line-height: 38px;
+}
+.order-top ul {
+  padding: 0 10px;
+}
+.order-top .qx {
+  vertical-align: middle;
+  color: #3c3c3c;
+  cursor: pointer;
+}
+.order-top .checkbox {
+  cursor: pointer;
+}
+.order-top li {
+  display: inline-block;
+  text-align: center;
+}
+.order-top li:nth-child(2) {
+  width: 360px;
+}
+.order-top li:nth-child(3) {
+  width: 100px;
+}
+.order-top li:nth-child(4) {
+  width: 140px;
+}
+.order-top li:nth-child(5) {
+  width: 160px;
+}
+.order-top li:nth-child(6) {
+  width: 90px;
+}
+
+/* 商品列表 */
+.goodslist {
+  height: 140px;
+  border: 1px solid #e7e7e7;
+  background: #f7f7f7;
+  margin-top: 10px;
+}
+.goodslist .shoptitledes {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+.goodslist .shoptitledes .checkbox {
+  vertical-align: middle;
+}
+.goodslist .shoptitledes .shoptitle {
+  font-weight: bold;
+  color: #3c3c3c;
+}
+.goodslist .goodsdetail {
+  height: 100px;
+  background: #fff7f7;
+  padding: 0 10px;
+}
+.goodslist .goodsdetail input {
+  line-height: 100px;
+  height: 100px;
+  vertical-align: middle;
+}
+.goodslist .goodsdetail a {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+}
+.goodslist .goodsdetail a img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 购物车下面的导航 */
+.order-bottom {
+  height: 59px;
+  line-height: 59px;
+  border: 1px solid #e7e7e7;
+  background: #f7f7f7;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
 /* 引入底部样式 */
 /* 尾部 */
 footer {
@@ -459,4 +595,4 @@ footer .float .messright p {
   background-position: -50px -130px;
 }
 
-/*# sourceMappingURL=cart.css.map */
+/*# sourceMappingURL=cart1.css.map */

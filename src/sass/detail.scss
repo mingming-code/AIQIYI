@@ -12,6 +12,10 @@
     height: 100%;
     background: #000;
 
+    a {
+        display: block;
+    }
+
     .icon {
         height: 23px;
         background: url(//www.iqiyipic.com/common/fix/iqiyi_shop_images/toolbar_linkIcon.png) no-repeat;
@@ -27,7 +31,6 @@
         text-align: center;
         color: #fff;
         font-size: 14px;
-        cursor: pointer;
         position: relative;
 
         i {
@@ -106,8 +109,8 @@
     }
 
     .scale {
-        position: relative;
         float: left;
+        position: relative;
     }
 
     /* 左边图片 */
@@ -116,11 +119,11 @@
         height: 418px;
         border: 1px solid #e7e7e7;
         position: relative;
-        float: left;
     }
 
     .smallimg img {
         width: 100%;
+        height: 100%;
         display: block;
     }
 
@@ -142,7 +145,8 @@
         overflow: hidden;
         display: none;
         position: absolute;
-        left: 428px;
+        left: 430px;
+        top: 0px;
         z-index: 1;
     }
 
@@ -151,6 +155,30 @@
         display: block;
         width: 600px;
         height: 600px;
+    }
+
+    .piclist {
+        margin-top: 13px;
+
+        li {
+            width: 56px;
+            height: 56px;
+            padding: 1px;
+            margin-left: 20px;
+            float: left;
+            border: 1px solid #e7e7e7;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        li:hover {
+            padding: 0;
+            border: 2px solid #ee394b;
+        }
     }
 
     /* 右边商品信息 */
@@ -301,8 +329,61 @@
 
         }
 
-
     }
+}
+
+/* 加入购物车遮罩 */
+.shadow {
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+.showinfo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 3px;
+    width: 384px;
+    height: 160px;
+    display: none;
+
+    .red {
+        height: 40px;
+        line-height: 40px;
+        padding-left: 10px;
+        color: #fff;
+        font-size: 16px;
+        background: $color;
+        position: relative;
+
+        a {
+            position: absolute;
+            right: 10px;
+            color: #fff;
+        }
+    }
+
+    .detail {
+        padding: 40px;
+        background: #fff;
+        font-size: 12px;
+        text-align: center;
+        line-height: 40px;
+
+        .orange {
+            color: #fa693c;
+        }
+    }
+
+
 }
 
 /* 引入底部样式 */

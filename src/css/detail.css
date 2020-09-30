@@ -320,6 +320,9 @@ nav .active {
   height: 100%;
   background: #000;
 }
+.fixedmenu a {
+  display: block;
+}
 .fixedmenu .icon {
   height: 23px;
   background: url(//www.iqiyipic.com/common/fix/iqiyi_shop_images/toolbar_linkIcon.png) no-repeat;
@@ -334,7 +337,6 @@ nav .active {
   text-align: center;
   color: #fff;
   font-size: 14px;
-  cursor: pointer;
   position: relative;
 }
 .fixedmenu .shoppingcar i {
@@ -408,18 +410,18 @@ nav .active {
   clear: both;
 }
 .mainContent .scale {
-  position: relative;
   float: left;
+  position: relative;
 }
 .mainContent .smallimg {
   width: 418px;
   height: 418px;
   border: 1px solid #e7e7e7;
   position: relative;
-  float: left;
 }
 .mainContent .smallimg img {
   width: 100%;
+  height: 100%;
   display: block;
 }
 .mainContent .sf {
@@ -439,7 +441,8 @@ nav .active {
   overflow: hidden;
   display: none;
   position: absolute;
-  left: 428px;
+  left: 430px;
+  top: 0px;
   z-index: 1;
 }
 .mainContent .df img {
@@ -447,6 +450,26 @@ nav .active {
   display: block;
   width: 600px;
   height: 600px;
+}
+.mainContent .piclist {
+  margin-top: 13px;
+}
+.mainContent .piclist li {
+  width: 56px;
+  height: 56px;
+  padding: 1px;
+  margin-left: 20px;
+  float: left;
+  border: 1px solid #e7e7e7;
+  cursor: pointer;
+}
+.mainContent .piclist li img {
+  width: 100%;
+  height: 100%;
+}
+.mainContent .piclist li:hover {
+  padding: 0;
+  border: 2px solid #ee394b;
 }
 .mainContent .des {
   float: left;
@@ -569,6 +592,54 @@ nav .active {
   position: absolute;
   left: 0;
   overflow: hidden;
+}
+
+/* 加入购物车遮罩 */
+.shadow {
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  display: none;
+}
+
+.showinfo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 3px;
+  width: 384px;
+  height: 160px;
+  display: none;
+}
+.showinfo .red {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  color: #fff;
+  font-size: 16px;
+  background: #ee394b;
+  position: relative;
+}
+.showinfo .red a {
+  position: absolute;
+  right: 10px;
+  color: #fff;
+}
+.showinfo .detail {
+  padding: 40px;
+  background: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 40px;
+}
+.showinfo .detail .orange {
+  color: #fa693c;
 }
 
 /* 引入底部样式 */

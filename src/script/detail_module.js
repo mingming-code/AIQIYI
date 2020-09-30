@@ -25,6 +25,22 @@ define([], function () {
                 $(".sailnum").html(data.sailnumber);
                 $(".smallimg img").attr("src", data.url);
                 $(".df img").attr("src", data.url);
+                let $piclistarr = data.piclisturl.split(",");
+                let $piclist = $(".piclist ul");
+                let imgstr = "";
+                $.each($piclistarr, function (index, value) {
+                    //小图只渲染五张
+                    if (index === 5) {
+                        return false;
+                    }
+                    imgstr += ` <li><img src="${value}" alt=""></li>`
+                })
+                $piclist.html(imgstr);
+                let $imgli = $(".piclist li");
+                $imgli.hover(function () {
+                    $(".smallimg img").attr("src", $(this).find("img").attr("src"));
+                    $(".df img").attr("src", $(this).find("img").attr("src"));
+                })
             })
             // 放大镜效果
             const $spic = $(".smallimg"); //小图
@@ -52,8 +68,8 @@ define([], function () {
                     if (l < 0) {
                         l = 0
                     }
-                    if (l > $spic.width() - $sf.width()+2) {
-                        l = $spic.width() - $sf.width()+2
+                    if (l > $spic.width() - $sf.width()) {
+                        l = $spic.width() - $sf.width()
                     }
                     if (t < 0) {
                         t = 0
@@ -74,7 +90,19 @@ define([], function () {
                 $sf.hide();
                 $df.hide();
             })
-
+            //    加入购物车
+            let count = $(".buynum").html()
+            $(".join").on("click", function () {
+                count++;
+                $(".shadow").show();
+                $(".showinfo").show();
+                $(".buynum").html(count);
+            });
+            // 关闭
+            $(".close").on("click",function(){
+                $(".shadow").hide();
+                $(".showinfo").hide()
+            })
         }
     }
 });
