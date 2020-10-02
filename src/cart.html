@@ -6,7 +6,7 @@
   <meta name="title" content="爱奇艺商城-购享娱乐" />
   <meta name="keywords" content="网上购物,网上商城,视频购物,明星服装,明星店铺,爱奇艺商城" />
   <meta name="description" content="爱奇艺商城是国内首家以影视剧为依托，提供热门的影视剧、动漫的明星服装，周边商品的在线购买服务；正品低价、配送及时、放心购物。" />
-  <!-- <link rel="icon" href="img/logo.ico"> -->
+  <link rel="icon" href="img/logo.ico">
   <link rel="stylesheet" href="css/cart.css">
   <script src="script/require.js" data-main="script/main.js" id="currentpage" data-page="cart_module"></script>
   <title>购物车</title>
@@ -73,7 +73,7 @@
           </li>
           <span class="line floatline"></span>
           <li class="first">
-            <a href="">爱奇艺首页</a>
+            <a href="index1.html">爱奇艺首页</a>
           </li>
         </ul>
 
@@ -88,11 +88,14 @@
         </h1>
         <div class="head-right">
           <ul>
-            <li>查看购物车</li>
+            <li class="active">查看购物车</li>
             <li>确认订单信息</li>
             <li>买家付款</li>
             <li>交易成功</li>
           </ul>
+          <div class="step-bar">
+            <div class="paststep"></div>
+          </div>
         </div>
 
       </div>
@@ -111,37 +114,121 @@
       <div class="main">
         <!-- 上面的导航 -->
         <div class="order-top">
-             <ul>
-               <li><input type="checkbox" class="qx">&nbsp;&nbsp;&nbsp;全选</li>
-               <li>商品信息</li>
-               <li>单价（元）</li>
-               <li>数量</li>
-               <li>实付款（元）</li>
-               <li>交易操作</li>
-             </ul>
+          <ul>
+            <li><input type="checkbox" class="qx">&nbsp;&nbsp;&nbsp;全选</li>
+            <li>商品信息</li>
+            <li>单价（元）</li>
+            <li>数量</li>
+            <li>实付款（元）</li>
+            <li>交易操作</li>
+          </ul>
         </div>
         <!-- 商品列表 -->
         <div class="goodslist">
-              <div class="shoptitledes">
-                <input type="checkbox" class="checkbox">&nbsp;&nbsp;&nbsp;
-                <i></i>
-                <span>由<span class="shoptitle">钟情旗舰店</span>发货</span>
+          <div class="shoptitledes">
+            <input type="checkbox" class="checkbox">&nbsp;&nbsp;&nbsp;
+            <i></i>
+            <span>由<span class="shoptitle">钟情旗舰店</span>发货</span>
+          </div>
+          <div class="goodsdetail">
+            <input type="checkbox" class="checkbox">
+            <a href="detail.html?sid=1" class="img">
+              <img src="img/logo1.jpg" alt="">
+            </a>
+            <span class="title">【60包】钟情本色竹浆</span>
+            <!-- 下面的小图标 -->
+            <i></i>
+            <div class="primess">
+              <p class="preprice">69.9</p>
+              <p class="price">49.9</p>
+              <p class="promotion">促销</p>
+            </div>
+            <div class="buynum">
+              <div class="clearpx">
+                <input type="text" title="请输入购买量" value="1" maxlength="8">
+                <span>
+                  <p class="add"></p>
+                  <p class=" minus"></p>
+                </span>
               </div>
-              <div class="goodsdetail">
-                <input type="checkbox" class="checkbox">
-                <a href="detail.html?sid=1">
-                  <img src="img/logo1.jpg" alt="">
-                </a>
+              <div class="limit">限购10件</div>
+            </div>
+            <span class="sumprice">99.8</span>
+            <div class="operation">
+              <a href="">移入收藏夹</a>
+              <br>
+              <a href="">删除</a>
+            </div>
+          </div>
+        </div>
+        <div class="goodslist">
+          <div class="shoptitledes">
+            <input type="checkbox" class="checkbox">&nbsp;&nbsp;&nbsp;
+            <i></i>
+            <span>由<span class="shoptitle">钟情旗舰店</span>发货</span>
+          </div>
+          <div class="goodsdetail">
+            <input type="checkbox" class="checkbox">
+            <a href="detail.html?sid=1" class="img">
+              <img src="img/logo1.jpg" alt="">
+            </a>
+            <span class="title">【60包】钟情本色竹浆</span>
+            <!-- 下面的小图标 -->
+            <i></i>
+            <div class="primess">
+              <p class="preprice">69.9</p>
+              <p class="price">49.9</p>
+              <p class="promotion">促销</p>
+            </div>
+            <div class="buynum">
+              <div class="clearpx">
+                <input type="text" title="请输入购买量" value="1" maxlength="8">
+                <span>
+                  <p class="add"></p>
+                  <p class=" minus"></p>
+                </span>
               </div>
+              <div class="limit">限购10件</div>
+            </div>
+            <span class="sumprice">99.8</span>
+            <div class="operation">
+              <a href="">移入收藏夹</a>
+              <br>
+              <a href="">删除</a>
+            </div>
+          </div>
         </div>
         <!-- 下面的导航 -->
-        <div class="order-bottom"></div>
+        <div class="wrap">
+          <div class="order-bottom">
+            <ul>
+              <li><input type="checkbox" class="qx">&nbsp;&nbsp;&nbsp;全选</li>
+              <li class="del"><a href="javascript:;">删除</a></li>
+              <li class="collect"><a href="javascript:;">移入收藏夹</a></li>
+              <li class="clearcart"><a href="javascript:;">清空购物车</a></li>
+            </ul>
+            <div class="totalmess">
+              <span class="selected">已选商品<span class="sumgoods">1</span>件</span>
+              <i>合计（不含运费）：</i><span class="price">￥<span class="sumprice">49.9</span></span>
+              <button>结算</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 页尾 -->
   <div id="foot"></div>
+  <!-- 回到顶部 -->
+  <div class="scrollmenu">
+    <div class="feedBack">
+      <a href=""></a>
+    </div>
+    <div class="toTop">
+      <a href="javascript:;"></a>
+    </div>
+  </div>
 </body>
 
 </html>

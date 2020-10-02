@@ -20,8 +20,39 @@
     float: right;
 
     ul {
+        padding-right: 0px;
+        float: none;
+
+        &::after {
+            @include clearfix()
+        }
+
         li {
             float: left;
+            width: 96px;
+            text-align: center;
+            color: #999;
+            font-size: 15px;
+            font-family: "\5FAE\8F6F\96C5\9ED1";
+        }
+
+        .active {
+            color: #ff7b7e;
+        }
+    }
+
+    .step-bar {
+        margin-top: 10px;
+        background: url('../img/def_grey_step.png') no-repeat;
+        height: 30px;
+        position: relative;
+
+        .paststep {
+            width: 25%;
+            height: 30px;
+            background: url(../img/sel_red_step.png) no-repeat;
+            position: absolute;
+            top: 0;
         }
     }
 }
@@ -52,7 +83,7 @@
     h1 {
         font-size: 14px;
         color: #3c3c3c;
-        border-bottom: 2px solid #ee394b;
+        border-bottom: 2px solid $color;
         float: left;
         line-height: 36px;
     }
@@ -63,6 +94,7 @@
     border: 1px solid #e7e7e7;
     background: #f7f7f7;
     line-height: 38px;
+    margin-bottom: 10px;
 
     ul {
         padding: 0 10px;
@@ -109,7 +141,7 @@
     height: 140px;
     border: 1px solid #e7e7e7;
     background: #f7f7f7;
-    margin-top: 10px;
+    margin-bottom: 10px;
 
     .shoptitledes {
         height: 40px;
@@ -127,25 +159,165 @@
     }
 
     .goodsdetail {
-        height: 100px;
+        height: 80px;
         background: #fff7f7;
-        padding: 0 10px;
+        padding: 10px;
+        position: relative;
 
         input {
-            line-height: 100px;
-            height: 100px;
-            vertical-align: middle;
+            line-height: 80px;
+            height: 80px;
+            vertical-align: top;
         }
 
-        a {
+        .img {
             display: inline-block;
             width: 80px;
             height: 80px;
-            vertical-align: middle;
+            vertical-align: top;
+            margin-left: 15px;
 
             img {
                 width: 100%;
                 height: 100%;
+            }
+        }
+
+        .title {
+            vertical-align: top;
+            color: #3c3c3c;
+            margin-left: 10px;
+            display: inline-block;
+            width: 250px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* 商品下面的小图标 */
+        i {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 135px;
+            bottom: 10px;
+            background: url('http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/PC_detail_post.png');
+        }
+
+        .primess {
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            margin-left: 30px;
+
+            .preprice {
+                text-decoration: line-through;
+            }
+
+            .price {
+                margin-top: 5px;
+            }
+
+            .promotion {
+                width: 50px;
+                border: 1px solid $color;
+                line-height: 22px;
+                padding: 0 16px 0 3px;
+                color: $color;
+                display: inline-block;
+            }
+        }
+
+        .buynum {
+            display: inline-block;
+            background: #fff0e7;
+            border: 1px solid #ffe1d3;
+            width: 82px;
+            height: 52px;
+            vertical-align: top;
+            margin-left: 35px;
+            padding: 4px;
+
+
+            .clearpx {
+                /* 去除子元素右边3px */
+                font-size: 0;
+                background: #fff;
+            }
+
+            input {
+                width: 58px;
+                height: 28px;
+                margin-right: 2px;
+                border: 1px solid #999;
+                line-height: 28px;
+                text-align: center;
+                color: #3c3c3c;
+                outline: 0;
+            }
+
+            span {
+                display: inline-block;
+                width: 20px;
+                height: 30px;
+                vertical-align: top;
+            }
+
+            .add {
+                margin-bottom: 2px;
+                background-position: -160px -22px;
+                cursor: pointer;
+            }
+
+            .add:hover {
+                background-position: -160px -44px;
+            }
+
+            p {
+                display: inline-block;
+                width: 20px;
+                height: 14px;
+                background: url(../img/detail_icon4.png) no-repeat -180px -66px;
+                /* 默认向下灰色 */
+                cursor: default;
+                vertical-align: top;
+
+            }
+
+            .limit {
+                color: #f66a11;
+                height: 26px;
+                line-height: 26px;
+                text-align: center;
+            }
+
+        }
+
+        .sumprice {
+            display: inline-block;
+            width: 115px;
+            text-align: center;
+            margin-left: 30px;
+            vertical-align: top;
+            font-size: 18px;
+            color: $color;
+        }
+
+        .operation {
+
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 57px;
+
+            a {
+                color: #333;
+                display: inline-block;
+                line-height: 25px;
+            }
+
+            a:hover {
+                color: $color;
             }
         }
     }
@@ -159,6 +331,115 @@
     background: #f7f7f7;
     margin-top: 10px;
     padding: 0 10px;
+    width: 918px;
+
+    .qx {
+        vertical-align: middle;
+    }
+
+    ul {
+        float: left;
+        color: #3c3c3c;
+        line-height: 50px;
+
+    }
+
+    li {
+        display: inline-block;
+        text-align: center;
+        min-width: 48px;
+        margin: 5px;
+        font-family: Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        a {
+            color: #3c3c3c;
+        }
+
+        a:hover {
+            color: $color;
+        }
+    }
+
+    .totalmess {
+        float: right;
+        color: #777;
+
+        i {
+            font-style: normal;
+            font-family: Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        }
+
+        .selected {
+            margin-right: 15px;
+            font-family: Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        }
+
+        .sumgoods {
+            color: $color;
+            font-weight: bold;
+        }
+
+        .price {
+            font-size: 18px;
+            color: $color;
+            font-family: arial;
+        }
+
+        .sumprice {
+            margin-right: 15px;
+        }
+
+        button {
+            width: 120px;
+            height: 38px;
+            line-height: 38px;
+            background: $color;
+            border: 1px solid $color;
+            border-radius: 3px;
+            font-family: "\5FAE\8F6F\96C5\9ED1";
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}
+
+/* 回到底部 */
+.scrollmenu {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    display: none;
+
+    a {
+        display: block;
+        width: 36px;
+        height: 36px;
+        background: url('http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/baseRedScrollBar.png');
+    }
+
+    .feedBack {
+        margin-bottom: 10px;
+
+        a {
+            background-position: -50px -82px;
+        }
+
+        a:hover {
+            background-position: -50px 0px;
+        }
+    }
+
+    .toTop {
+        a {
+            background-position: -50px -46px;
+        }
+
+        a:hover {
+            background-position: -50px -130px;
+        }
+    }
 }
 
 /* 引入底部样式 */
