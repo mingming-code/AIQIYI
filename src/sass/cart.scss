@@ -405,42 +405,6 @@
     }
 }
 
-/* 回到底部 */
-.scrollmenu {
-    position: fixed;
-    bottom: 10px;
-    right: 30px;
-    display: none;
-
-    a {
-        display: block;
-        width: 36px;
-        height: 36px;
-        background: url('http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/baseRedScrollBar.png');
-    }
-
-    .feedBack {
-        margin-bottom: 10px;
-
-        a {
-            background-position: -50px -82px;
-        }
-
-        a:hover {
-            background-position: -50px 0px;
-        }
-    }
-
-    .toTop {
-        a {
-            background-position: -50px -46px;
-        }
-
-        a:hover {
-            background-position: -50px -130px;
-        }
-    }
-}
 
 /* 引入底部样式 */
 @import "foot"

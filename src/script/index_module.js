@@ -1,5 +1,5 @@
 // 数据渲染
-define(['toTop'], function () {
+define(['toTop'], function (totop) {
     return {
         init: function () {
             $(document).ready(function () {
@@ -46,7 +46,9 @@ define(['toTop'], function () {
                         }, 2000)
                     })
                 })
-                $("#foot").load("foot.html");
+                $("#foot").load("foot.html",function(){
+                    totop.init();
+                });
             });
 
             //数据渲染

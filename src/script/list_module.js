@@ -1,10 +1,12 @@
-define(['pagination', 'jlazyload'], function () {
+define(['toTop','pagination', 'jlazyload'], function (totop) {
     return {
         init: function () {
             // 头部HTML加载
             $(document).ready(function () {
                 $("#head").load("head.html")
-                $("#foot").load("foot.html")
+                $("#foot").load("foot.html",function(){
+                    totop.init();
+                });
             });
             // 左边导航收放
             let $menuli = $(".searchResult_LUl .first i") //获取一级导航的图标
@@ -81,10 +83,12 @@ define(['pagination', 'jlazyload'], function () {
                 console.log(data)
                 let $strhtml = ""
                 $.each(data, function (index, value) {
+                    //懒加载的img
+                    // <img class="lazy" data-original="${value.url}" width="228" height="228"/>
                     $strhtml += `
                     <li>
                     <a href="detail.html?sid=${value.sid}">
-                    <img class="lazy" data-original="${value.url}" width="228" height="228"/>
+                    <img src="${value.url}"/>
                     </a>
                     <a href="" class="title">
                         <span class="orange">青春有你2</span>
@@ -101,12 +105,12 @@ define(['pagination', 'jlazyload'], function () {
 
                 //重置数组
                 resetarr()
-                //懒加载
-                $(function () {
-                    $("img.lazy").lazyload({
-                        effect: "fadeIn"
-                    });
-                });
+                //懒加载,元素高度大于可视区时才可以使用
+                // $(function () {
+                //     $("img.lazy").lazyload({
+                //         effect: "fadeIn"
+                //     });
+                // });
             })
 
             // 2.分页

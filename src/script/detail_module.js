@@ -1,4 +1,4 @@
-define([], function () {
+define(['jcookie'], function () {
     return {
         init: function () {
             // 头部HTML加载
@@ -90,16 +90,65 @@ define([], function () {
                 $sf.hide();
                 $df.hide();
             })
+
+            let count;
+            if ($.cookie("cookienum")) {
+                //    获取购物车总数
+                count = $.cookie("cookienum").split(',').reduce(function (prev, curr) {
+                    return Number(prev) + Number(curr);
+                })
+            } else {
+                count = 0;
+            }
+            $(".buynum").html(count);
+            let sidarr = []; //商品的id
+            let numarr = []; //商品的数量
             //    加入购物车
-            let count = $(".buynum").html()
             $(".join").on("click", function () {
-                count++;
+                //获取购物车输入的数量转为整数
+                let num = +$(".number").find("input").val();
+                //如果商品小于等于0不能加入购物车
+                if (num <= 0) {
+                    alert("该宝贝不能减少了哦")
+                    return;
+                }
+                count += num;
                 $(".shadow").show();
                 $(".showinfo").show();
                 $(".buynum").html(count);
+
+                // cookie存在，取出sid和数量
+                if ($.cookie("cookiesid") && $.cookie("cookienum")) {
+                    sidarr = $.cookie("cookiesid").split(','); //取出sid将值转换成数组。
+                    numarr = $.cookie("cookienum").split(','); //取出数量将值转换成数组。
+                }
+
+                // sid在cookie数组中存在,如果是默认sid是1，需要转为字符串1
+                if (sidarr.indexOf(String(sid)) != -1) {
+                    // 查找sid在数组中的位置
+                    let sidindex = $.inArray(String(sid), sidarr)
+                    numarr[sidindex] = Number(numarr[sidindex]) + Number(num)
+                    //sid存在重置当前sid的数量
+                    $.cookie('cookienum', numarr, {
+                        expires: 10,
+                        path: "/"
+                    });
+                } else { //sid在cookie数组中不存在
+                    sidarr.push(sid)
+                    numarr.push(num)
+                    $.cookie('cookiesid', sidarr, {
+                        expires: 10,
+                        path: "/"
+                    });
+                    $.cookie('cookienum', numarr, {
+                        expires: 10,
+                        path: "/"
+                    });
+
+                }
             });
             // 关闭
-            $(".close").on("click",function(){
+            $(".close").on("click", function () {
                 $(".shadow").hide();
                 $(".showinfo").hide()
             })
