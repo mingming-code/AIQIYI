@@ -1,9 +1,12 @@
-define(['jcookie'], function () {
+define(['cookiesum','jcookie'], function (cookiesum) {
     return {
         init: function () {
             // 头部HTML加载
             $(document).ready(function () {
-                $("#head").load("head.html");
+                $("#head").load("head.html", function () {
+                    // 调用获取购物车数量的模块
+                    cookiesum.sum();
+                });
                 $("#foot").load("foot.html")
             });
             //数据渲染
@@ -94,12 +97,13 @@ define(['jcookie'], function () {
             let count;
             if ($.cookie("cookienum")) {
                 //    获取购物车总数
-                count = $.cookie("cookienum").split(',').reduce(function (prev, curr) {
+                count = +$.cookie("cookienum").split(',').reduce(function (prev, curr) {
                     return Number(prev) + Number(curr);
                 })
             } else {
                 count = 0;
             }
+
             $(".buynum").html(count);
             let sidarr = []; //商品的id
             let numarr = []; //商品的数量

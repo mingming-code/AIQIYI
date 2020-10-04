@@ -1,10 +1,12 @@
 // 数据渲染
-define(['toTop'], function (totop) {
+define(['toTop','cookiesum','login'], function (totop,cookiesum,login) {
     return {
         init: function () {
             $(document).ready(function () {
                 // 头部HTML加载
                 $("#head").load("head.html", function () {
+                    // 调用获取购物车数量的模块
+                    cookiesum.sum();
                     // 异步的,头部加载成功后执行头部轮播的代码
                     // 头部广告轮播
                     let $lunboli = $(".lunbo li");
@@ -49,6 +51,10 @@ define(['toTop'], function (totop) {
                 $("#foot").load("foot.html",function(){
                     totop.init();
                 });
+                
+                $("#login").load("login.html",function(){
+                        login.init();
+                })
             });
 
             //数据渲染

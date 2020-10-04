@@ -1,13 +1,14 @@
-define(['toTop'], function (totop) {
+define(['toTop', 'cookiesum'], function (totop, cookiesum) {
     return {
         init: function () {
             // 头部HTML加载
             $(document).ready(function () {
-                $("#head").load("head.html");
                 $("#foot").load("foot.html", function () {
                     totop.init();
                 });
             });
+            // 调用获取购物车数量的模块
+            cookiesum.sum();
             // 当可视区加滚动条小于购物车下面导航的高度时,转为固定定位
             let $bottomnav = $(".order-bottom");
             let $wrap = $(".wrap"); //下面导航的外层
@@ -39,15 +40,19 @@ define(['toTop'], function (totop) {
                 let sidarr = $.cookie("cookiesid").split(','); //取出sid将值转换成数组。
                 let numarr = $.cookie("cookienum").split(','); //取出数量将值转换成数组。
                 for (let i = 0; i < sidarr.length; i++) {
-                    render(sidarr[i], numarr[i])
+                    render(sidarr[i], numarr[i]);
+
                 }
             } else {
                 console.log("当前购物车为空");
+                $(".nogoods").show();
+                $(".main").hide()
             }
+            let $inputs = null;
 
             function render(sid, num) {
                 $.ajax({
-                    url: "http://localhost/code/shoppingcar/php/gegtsid.php",
+                    url: "http://localhost/AIQIYI/php/getsid.php",
                     data: {
                         sid: sid
                     },
@@ -67,8 +72,8 @@ define(['toTop'], function (totop) {
                     $(".item-list").append(itemlist);
 
                     calc()
-                    // //商品选择框的input集合
-                    // $inputs = $(".goods-item:visible").find(".cart-checkbox input").not(".allsel")
+                    //商品选择框的input集合
+                    $inputs = $(".goodslist:visible").find(".good-checkbox")
                 })
             }
             //总价和数量渲染
@@ -78,7 +83,7 @@ define(['toTop'], function (totop) {
                 let allprice = 0;
                 $(".goodslist:visible").each(function (index, element) {
                     if ($(element).find(".good-checkbox").prop("checked")) {
-                        allcount += parseInt($(element).find("..buynum input").val());
+                        allcount += parseInt($(element).find(".buynum input").val());
                         allprice += parseFloat($(element).find(".sumprice").html())
                     }
                 })
@@ -86,12 +91,112 @@ define(['toTop'], function (totop) {
                 $(".sumgoods").html(allcount);
                 $(".order-bottom .sumprice").html(allprice.toFixed(2));
             }
-            $(".good-checkbox").on("click", function () {
-                console.log("dl")
-                $(this).prop("checked");
-             
+            //全选按钮
+            $(".qx").on("click", function () {
+                $(".main").find("input").prop("checked", $(this).prop("checked"));
                 //修改选择的商品，重新计算
                 calc();
+            })
+
+            //将input的点击委托给item-list
+            $(".item-list").on("click", $inputs, function (e) {
+                // 如果是店铺的选择框
+                if (e.target.className === "shopcheckbox") {
+                    console.log("店铺选择框")
+                    $(e.target).parent().siblings('div').find('.good-checkbox').prop("checked", $(e.target).prop("checked"))
+                }
+                // 如果是商品选择框
+                if (e.target.className === "good-checkbox") {
+                    console.log("商品选择框")
+                    $(e.target).parent().siblings('div').find('.shopcheckbox').prop("checked", $(e.target).prop("checked"))
+                }
+                // 如果商品全部被选择
+                if ($(".goodslist:visible").find(".good-checkbox:checked").size() === $inputs.length) {
+                    $(".qx").prop("checked", true);
+                } else {
+                    $(".qx").prop("checked", false);
+                }
+
+                //添加一个商品
+                if (e.target.className === "add") {
+                    let num = $(e.target).parent().siblings("input").val()
+                    num++;
+
+                    $(e.target).siblings().css({
+                        "background-position": "-180px -22px",
+                        "cursor": "pointer"
+                    })
+
+                    $(e.target).siblings().hover(function () {
+
+                        $(this).css({
+                            "background-position": "-180px -44px",
+                        })
+                    }, function () {
+
+                        $(this).css({
+                            "background-position": "-180px -22px",
+                        })
+                    })
+
+                    total(e, num)
+                }
+                //减去一个商品
+                if (e.target.className === "minus") {
+                    let num = $(e.target).parent().siblings("input").val();
+                    num--;
+                    if (num < 1) {
+                        alert("商品不能再少了哦")
+                        return;
+                    }
+
+                    if (num == 1) {
+                        $(e.target).hover(function () {
+                            $(this).css({
+                                "background-position": "-180px -66px",
+                                "cursor": "default"
+                            })
+                        }, function () {
+                            $(this).css({
+                                "background-position": "-180px -66px",
+                            })
+                        })
+                    }
+                    total(e, num)
+
+                }
+                calc();
+                // 删除列表
+                if (e.target.className === "del") {
+                    $(e.target).parent().parent().parent().remove()
+
+                }
+            })
+            //加减商品后重新计算总价和数量
+            function total(e, num) {
+                let priceAll = $(e.target).parent().parent().parent().parent().find(".sumprice");
+                let price = $(e.target).parent().parent().parent().parent().find(".price");
+                priceAll.html((num * price.html()).toFixed(2))
+                $(e.target).parent().siblings("input").val(num)
+            }
+            // 清空购物车
+            $(".clearcart").on("click", function () {
+                let clear = confirm("你确定清空购物车吗");
+                if (clear) {
+                    $(".nogoods").show();
+                    $(".main").remove();
+                    /* 清缓存 */
+                    $.cookie('cookiesid', "", {
+                        expires: -1,
+                        path: "/"
+                    });
+                    $.cookie('cookienum', "", {
+                        expires: -1,
+                        path: "/"
+                    });
+
+                }
+
             })
         }
     }

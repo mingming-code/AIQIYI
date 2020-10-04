@@ -660,33 +660,36 @@ nav .active {
   cursor: pointer;
 }
 
-/* 回到底部 */
-.scrollmenu {
-  position: fixed;
-  bottom: 10px;
-  right: 30px;
+/* 没有商品的购物车 */
+.nogoods {
+  padding: 50px 0;
+  text-align: center;
   display: none;
 }
-.scrollmenu a {
-  display: block;
-  width: 36px;
-  height: 36px;
-  background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/baseRedScrollBar.png");
+.nogoods p {
+  font-size: 18px;
+  color: #3c3c3c;
+  margin-top: 15px;
 }
-.scrollmenu .feedBack {
-  margin-bottom: 10px;
+.nogoods div {
+  margin-top: 10px;
 }
-.scrollmenu .feedBack a {
-  background-position: -50px -82px;
+.nogoods span {
+  margin-right: 20px;
+  height: 24px;
+  line-height: 24px;
 }
-.scrollmenu .feedBack a:hover {
-  background-position: -50px 0px;
-}
-.scrollmenu .toTop a {
-  background-position: -50px -46px;
-}
-.scrollmenu .toTop a:hover {
-  background-position: -50px -130px;
+.nogoods a {
+  display: inline-block;
+  background: #feebed;
+  color: #ee394b;
+  height: 22px;
+  line-height: 22px;
+  border: 1px solid #ee394b;
+  border-radius: 2px;
+  text-align: center;
+  padding: 0 20px;
+  font-size: 12px;
 }
 
 /* 引入底部样式 */

@@ -127,7 +127,7 @@
         <div class="item-list">
           <div class="goodslist" style="display: none;">
             <div class="shoptitledes">
-              <input type="checkbox" class="checkbox">&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" class="shopcheckbox">&nbsp;&nbsp;&nbsp;
               <i></i>
               <span>由<span class="shoptitle">钟情旗舰店</span>发货</span>
             </div>
@@ -149,7 +149,7 @@
                   <input type="text" title="请输入购买量" value="1" maxlength="8">
                   <span>
                     <p class="add"></p>
-                    <p class=" minus"></p>
+                    <p class="minus"></p>
                   </span>
                 </div>
                 <div class="limit">限购10件</div>
@@ -158,7 +158,7 @@
               <div class="operation">
                 <a href="">移入收藏夹</a>
                 <br>
-                <a href="">删除</a>
+                <a href="javascript:;" class="del">删除</a>
               </div>
             </div>
           </div>
@@ -170,14 +170,22 @@
               <li><input type="checkbox" class="qx">&nbsp;&nbsp;&nbsp;全选</li>
               <li class="del"><a href="javascript:;">删除</a></li>
               <li class="collect"><a href="javascript:;">移入收藏夹</a></li>
-              <li class="clearcart"><a href="javascript:;">清空购物车</a></li>
+              <li class="clearcart"><a href="">清空购物车</a></li>
             </ul>
             <div class="totalmess">
-              <span class="selected">已选商品<span class="sumgoods">1</span>件</span>
-              <i>合计（不含运费）：</i><span class="price">￥<span class="sumprice">49.9</span></span>
+              <span class="selected">已选商品<span class="sumgoods">0</span>件</span>
+              <i>合计（不含运费）：</i><span class="price">￥<span class="sumprice">0</span></span>
               <button>结算</button>
             </div>
           </div>
+        </div>
+      </div>
+      <!-- 没有商品的购物车 -->
+      <div class="nogoods">
+        <p>你的购物车没有添加商品哦</p>
+        <div>
+          <span>赶快去购物吧</span>
+          <a href="index1.html">去首页</a>
         </div>
       </div>
     </div>

@@ -312,6 +312,241 @@ nav .active {
   font-weight: bold;
 }
 
+/* 引入底部样式 */
+/* 尾部 */
+footer {
+  width: 100%;
+  background: #fafafa;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding-top: 34px;
+}
+footer .foot {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 12px;
+}
+footer .foot .circle {
+  display: flex;
+  justify-content: space-around;
+}
+footer .foot .circle .img {
+  float: left;
+}
+footer .foot .circle .mess {
+  color: #777;
+  font-size: 12px;
+  float: left;
+  margin-left: 18px;
+  margin-top: 15px;
+}
+footer .foot .code {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 34px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+footer .foot .code::after {
+  content: "";
+  height: 0;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
+footer .float {
+  float: left;
+}
+footer .float .codeleft {
+  float: left;
+}
+footer .float .codeleft img {
+  width: 120px;
+  height: 120px;
+}
+footer .float .messright {
+  float: left;
+  width: 270px;
+  margin-left: 10px;
+  font-size: 12px;
+}
+footer .float .messright h1 {
+  color: #333;
+  font-size: 22px;
+  padding-bottom: 5px;
+}
+footer .float .messright p {
+  color: #666;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.foot-bottom {
+  padding-bottom: 36px;
+  background: #f5f5f5;
+}
+.foot-bottom .contain {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 12px;
+  text-decoration: none;
+}
+.foot-bottom .contain .contain-top {
+  height: 120px;
+}
+.foot-bottom .contain .footnav {
+  text-align: center;
+  padding: 5px 0;
+}
+.foot-bottom .contain .footnav a {
+  text-decoration: none;
+  color: #333;
+}
+.foot-bottom .contain .footnav span {
+  margin: 0 3px 0 7px;
+  color: #333;
+}
+.foot-bottom .contain .report {
+  text-align: center;
+  padding: 5px 0;
+}
+.foot-bottom .contain .report a {
+  color: #666;
+  text-decoration: none;
+}
+.foot-bottom .contain .report .ml30 {
+  margin-left: 30px;
+}
+.foot-bottom .contain .copyright {
+  text-align: center;
+  padding: 5px 0;
+  color: #777;
+}
+.foot-bottom .contain .copyright a {
+  color: #777;
+  text-decoration: none;
+}
+.foot-bottom .contain .copyright a:hover {
+  color: red;
+}
+
+/* 回到底部 */
+.scrollmenu {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  display: none;
+}
+.scrollmenu a {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/baseRedScrollBar.png");
+}
+.scrollmenu .feedBack {
+  margin-bottom: 10px;
+}
+.scrollmenu .feedBack a {
+  background-position: -50px -82px;
+}
+.scrollmenu .feedBack a:hover {
+  background-position: -50px 0px;
+}
+.scrollmenu .toTop a {
+  background-position: -50px -46px;
+}
+.scrollmenu .toTop a:hover {
+  background-position: -50px -130px;
+}
+
+/* 引入登录样式 */
+.shade {
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+/* 登录框 */
+.log_in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 460px;
+  height: 400px;
+  background: #fff;
+  z-index: 2;
+}
+.log_in .login-top {
+  height: 50px;
+  line-height: 50px;
+  background: url("http://www.iqiyipic.com/common/fix/v3-login/login-logo.png");
+  color: #5aa700;
+  font-size: 14px;
+  padding: 0 0 0 104px;
+  position: relative;
+}
+.log_in .login-top a {
+  color: black;
+  position: absolute;
+  top: 0px;
+  right: 18px;
+}
+.log_in .login-main {
+  width: 360px;
+  margin: 0 auto;
+}
+.log_in .login-main div {
+  height: 78px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+.log_in .login-main div input {
+  position: absolute;
+  bottom: 0px;
+  left: 57px;
+  border: none;
+  outline: none;
+}
+.log_in .login-main div label {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 50px;
+  text-align: right;
+}
+.log_in .login-main button {
+  height: 48px;
+  line-height: 48px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 60px;
+  color: #fff;
+  background-color: #5aa700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.log_in .login-bottom {
+  font-size: 14px;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+.log_in .login-bottom a {
+  color: #666;
+}
+
+.resdis {
+  display: none;
+}
+
 /*  轮播图 */
 .banner {
   position: relative;
@@ -767,153 +1002,6 @@ nav .active {
   width: 119px;
   height: 120px;
   margin: -1px 0 0 -1px;
-}
-
-/* 引入底部样式 */
-/* 尾部 */
-footer {
-  width: 100%;
-  background: #fafafa;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
-  padding-top: 34px;
-}
-footer .foot {
-  width: 1200px;
-  margin: 0 auto;
-  font-size: 12px;
-}
-footer .foot .circle {
-  display: flex;
-  justify-content: space-around;
-}
-footer .foot .circle .img {
-  float: left;
-}
-footer .foot .circle .mess {
-  color: #777;
-  font-size: 12px;
-  float: left;
-  margin-left: 18px;
-  margin-top: 15px;
-}
-footer .foot .code {
-  border-top: 1px solid #e5e5e5;
-  margin-top: 34px;
-  padding-top: 34px;
-  padding-bottom: 34px;
-}
-footer .foot .code::after {
-  content: "";
-  height: 0;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  clear: both;
-}
-footer .float {
-  float: left;
-}
-footer .float .codeleft {
-  float: left;
-}
-footer .float .codeleft img {
-  width: 120px;
-  height: 120px;
-}
-footer .float .messright {
-  float: left;
-  width: 270px;
-  margin-left: 10px;
-  font-size: 12px;
-}
-footer .float .messright h1 {
-  color: #333;
-  font-size: 22px;
-  padding-bottom: 5px;
-}
-footer .float .messright p {
-  color: #666;
-  font-size: 14px;
-  line-height: 25px;
-}
-
-.foot-bottom {
-  padding-bottom: 36px;
-  background: #f5f5f5;
-}
-.foot-bottom .contain {
-  width: 1200px;
-  margin: 0 auto;
-  font-size: 12px;
-  text-decoration: none;
-}
-.foot-bottom .contain .contain-top {
-  height: 120px;
-}
-.foot-bottom .contain .footnav {
-  text-align: center;
-  padding: 5px 0;
-}
-.foot-bottom .contain .footnav a {
-  text-decoration: none;
-  color: #333;
-}
-.foot-bottom .contain .footnav span {
-  margin: 0 3px 0 7px;
-  color: #333;
-}
-.foot-bottom .contain .report {
-  text-align: center;
-  padding: 5px 0;
-}
-.foot-bottom .contain .report a {
-  color: #666;
-  text-decoration: none;
-}
-.foot-bottom .contain .report .ml30 {
-  margin-left: 30px;
-}
-.foot-bottom .contain .copyright {
-  text-align: center;
-  padding: 5px 0;
-  color: #777;
-}
-.foot-bottom .contain .copyright a {
-  color: #777;
-  text-decoration: none;
-}
-.foot-bottom .contain .copyright a:hover {
-  color: red;
-}
-
-/* 回到底部 */
-.scrollmenu {
-  position: fixed;
-  bottom: 10px;
-  right: 30px;
-  display: none;
-}
-.scrollmenu a {
-  display: block;
-  width: 36px;
-  height: 36px;
-  background: url("http://www.iqiyipic.com/common/fix/h5_qiyiShop_img/baseRedScrollBar.png");
-}
-.scrollmenu .feedBack {
-  margin-bottom: 10px;
-}
-.scrollmenu .feedBack a {
-  background-position: -50px -82px;
-}
-.scrollmenu .feedBack a:hover {
-  background-position: -50px 0px;
-}
-.scrollmenu .toTop a {
-  background-position: -50px -46px;
-}
-.scrollmenu .toTop a:hover {
-  background-position: -50px -130px;
 }
 
 /*# sourceMappingURL=index.css.map */

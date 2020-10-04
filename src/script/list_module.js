@@ -1,10 +1,13 @@
-define(['toTop','pagination', 'jlazyload'], function (totop) {
+define(['toTop', 'cookiesum', 'pagination', 'jlazyload'], function (totop, cookiesum) {
     return {
         init: function () {
             // 头部HTML加载
             $(document).ready(function () {
-                $("#head").load("head.html")
-                $("#foot").load("foot.html",function(){
+                $("#head").load("head.html", function () {
+                    // 调用获取购物车数量的模块
+                    cookiesum.sum();
+                })
+                $("#foot").load("foot.html", function () {
                     totop.init();
                 });
             });
@@ -123,7 +126,7 @@ define(['toTop','pagination', 'jlazyload'], function (totop) {
                 homePage: '首页',
                 endPage: '尾页',
                 callback: function (api) {
-                    $headli.removeClass("active")//分页时去除头部导航样式
+                    $headli.removeClass("active") //分页时去除头部导航样式
                     console.log(api.getCurrent()); //获取的页码给后端
                     $.ajax({
                         url: 'http://localhost/AIQIYI/php/listdata.php',

@@ -281,7 +281,6 @@
                 /* 默认向下灰色 */
                 cursor: default;
                 vertical-align: top;
-
             }
 
             .limit {
@@ -350,6 +349,7 @@
         min-width: 48px;
         margin: 5px;
         font-family: Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+
         a {
             color: #3c3c3c;
         }
@@ -405,6 +405,42 @@
     }
 }
 
+/* 没有商品的购物车 */
+.nogoods {
+    padding: 50px 0;
+    text-align: center;
+    display: none;
+
+    p {
+        font-size: 18px;
+        color: #3c3c3c;
+        margin-top: 15px;
+    }
+
+    div {
+        margin-top: 10px;
+    }
+
+    span {
+
+        margin-right: 20px;
+        height: 24px;
+        line-height: 24px;
+    }
+
+    a {
+        display: inline-block;
+        background: #feebed;
+        color: $color;
+        height: 22px;
+        line-height: 22px;
+        border: 1px solid $color;
+        border-radius: 2px;
+        text-align: center;
+        padding: 0 20px;
+        font-size: 12px;
+    }
+}
 
 /* 引入底部样式 */
 @import "foot"
