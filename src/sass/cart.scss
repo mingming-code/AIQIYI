@@ -1,7 +1,6 @@
 @charset "utf-8";
-// 引入头部sass
-@import "head";
-/* 购物车版心 */
+// 引入公共sass
+@import "publichead";
 
 
 //购物车自己的样式
@@ -63,7 +62,7 @@
     background: #fafafa;
     padding-bottom: 50px;
 }
-
+/* 购物车版心 */
 .w {
     width: 938px;
     margin: 0 auto;
@@ -441,6 +440,3 @@
         font-size: 12px;
     }
 }
-
-/* 引入底部样式 */
-@import "foot"

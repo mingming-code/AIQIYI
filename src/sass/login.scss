@@ -7,9 +7,10 @@
     opacity: 0.5;
     position: fixed;
     top: 0;
-    // display: none;
+    display: none;
     z-index: 1;
 }
+
 
 /* 登录框 */
 .log_in {
@@ -23,8 +24,8 @@
     height: 400px;
     background: #fff;
     z-index: 2;
+    display: none;
 
-    // display: none;
     .login-top {
         height: 50px;
         line-height: 50px;
@@ -45,6 +46,19 @@
     .login-main {
         width: 360px;
         margin: 0 auto;
+
+        /* 得到焦点提示信息 */
+        p {
+            color: #f94343;
+            font-size: 12px;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        //注册
+        .res {
+            height: 58px;
+        }
 
         div {
             height: 78px;
@@ -82,10 +96,14 @@
             cursor: pointer;
 
         }
+
+        //注册
+        .resbtn {
+            margin-top: 41px;
+        }
     }
 
     .login-bottom {
-
         font-size: 14px;
         margin-top: 50px;
         padding-left: 20px;
@@ -95,6 +113,7 @@
         }
     }
 }
-.resdis{
+
+.resdis {
     display: none;
 }

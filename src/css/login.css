@@ -6,6 +6,7 @@
   opacity: 0.5;
   position: fixed;
   top: 0;
+  display: none;
   z-index: 1;
 }
 
@@ -21,6 +22,7 @@
   height: 400px;
   background: #fff;
   z-index: 2;
+  display: none;
 }
 .log_in .login-top {
   height: 50px;
@@ -40,6 +42,16 @@
 .log_in .login-main {
   width: 360px;
   margin: 0 auto;
+  /* 得到焦点提示信息 */
+}
+.log_in .login-main p {
+  color: #f94343;
+  font-size: 12px;
+  line-height: 80px;
+  text-align: center;
+}
+.log_in .login-main .res {
+  height: 58px;
 }
 .log_in .login-main div {
   height: 78px;
@@ -72,6 +84,9 @@
   border: none;
   outline: none;
   cursor: pointer;
+}
+.log_in .login-main .resbtn {
+  margin-top: 41px;
 }
 .log_in .login-bottom {
   font-size: 14px;

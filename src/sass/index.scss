@@ -1,8 +1,7 @@
 @charset "utf-8";
-// 引入头部sass
-@import "head";
-/* 引入底部样式 */
-@import "foot";
+// 引入公共sass
+@import "publichead";
+
 /* 引入登录样式 */
 @import "login";
 
@@ -209,6 +208,7 @@
                 }
 
             }
+
             //悬停图片变大
             li:hover img {
                 transform: scale(1.2);
@@ -549,4 +549,3 @@
     }
 
 }
-

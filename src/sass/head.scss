@@ -1,33 +1,6 @@
 @charset "utf-8";
-$color:#ee394b;
-$typeArea :1200px;
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    min-width: 1200px;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-/* 声明混合清浮动 */
-@mixin clearfix() {
-    content: "";
-    height: 0;
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    clear: both;
-}
+/* 引入公共样式 */
+@import "publichead";
 
 .line {
     background: #e5e5e5;

@@ -8,10 +8,26 @@ define([], function () {
                 $(".resdis").show()
             })
             //登录按钮
-            let $log=$(".resdis").find(".login-bottom").find("a");
+            let $log = $(".resdis").find(".login-bottom").find("a");
             $log.on("click", function () {
                 $(".logdis").show();
                 $(".resdis").hide()
+            })
+
+            let $login = $(".login");
+            let $register = $(".register");
+            let $close = $(".close");
+            $close.on("click", function () {
+                $(".log_in").hide();
+                $(".shade").hide();
+            })
+            $login.on("click", function () {
+                $(".shade").show();
+                $('.logdis').show();
+            })
+            $register.on("click", function () {
+                $(".shade").show();
+                $('.resdis').show();
             })
         }
     }
