@@ -60,7 +60,7 @@ define(['toTop','cookiesum','login'], function (totop,cookiesum,login) {
             //数据渲染
             ! function () {
                 $.ajax({
-                    url: "http://localhost/AIQIYI/php/index.php",
+                    url: "http://192.168.13.6/AIQIYI/php/index.php",
                     dataType: "json",
                 }).done(function (data) {
                     console.log(data)

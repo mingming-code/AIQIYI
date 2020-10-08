@@ -80,7 +80,7 @@ define(['toTop', 'cookiesum', 'pagination', 'jlazyload'], function (totop, cooki
             let prev = null; //前一个价格
             let next = null; //后一个价格
             $.ajax({
-                url: "http://localhost/AIQIYI/php/listdata.php",
+                url: "http://192.168.13.6/AIQIYI/php/listdata.php",
                 dataType: "json",
             }).done(function (data) {
                 console.log(data)
@@ -129,7 +129,7 @@ define(['toTop', 'cookiesum', 'pagination', 'jlazyload'], function (totop, cooki
                     $headli.removeClass("active") //分页时去除头部导航样式
                     console.log(api.getCurrent()); //获取的页码给后端
                     $.ajax({
-                        url: 'http://localhost/AIQIYI/php/listdata.php',
+                        url: 'http://192.168.13.6/AIQIYI/php/listdata.php',
                         data: {
                             page: api.getCurrent() //传输页面
                         },

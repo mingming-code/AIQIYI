@@ -17,6 +17,114 @@ a {
 }
 
 /* 声明混合清浮动 */
+/* 引入登录样式 */
+.shade {
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  display: none;
+  z-index: 1;
+}
+
+/* 登录框 */
+.log_in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 460px;
+  height: 400px;
+  background: #fff;
+  z-index: 2;
+  display: none;
+}
+.log_in .login-top {
+  height: 50px;
+  line-height: 50px;
+  background: url("http://www.iqiyipic.com/common/fix/v3-login/login-logo.png");
+  color: #5aa700;
+  font-size: 14px;
+  padding: 0 0 0 104px;
+  position: relative;
+}
+.log_in .login-top a {
+  color: black;
+  position: absolute;
+  top: 0px;
+  right: 18px;
+}
+.log_in .login-main {
+  width: 360px;
+  margin: 0 auto;
+  /* 得到焦点提示信息 */
+}
+.log_in .login-main p {
+  color: #aaa;
+  font-size: 12px;
+  line-height: 80px;
+  padding-left: 57px;
+  display: none;
+}
+.log_in .login-main .res {
+  height: 58px;
+}
+.log_in .login-main .res p {
+  line-height: 50px;
+}
+.log_in .login-main div {
+  height: 78px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+.log_in .login-main div input {
+  position: absolute;
+  bottom: 0px;
+  left: 57px;
+  border: none;
+  outline: none;
+  color: #aaa;
+}
+.log_in .login-main div label {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 50px;
+  text-align: right;
+}
+.log_in .login-main button, .log_in .login-main .resbtn {
+  height: 48px;
+  line-height: 48px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 60px;
+  color: #fff;
+  background-color: #5aa700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.log_in .login-main .resbtn {
+  margin-top: 41px;
+}
+.log_in .login-bottom {
+  font-size: 14px;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+.log_in .login-bottom a {
+  color: #666;
+}
+
+.resdis {
+  display: none;
+}
+
 .head-top .head-top-area,
 .head-bottom .head-bottom-area {
   width: 980px;

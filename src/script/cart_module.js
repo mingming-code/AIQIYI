@@ -1,4 +1,4 @@
-define(['toTop', 'cookiesum'], function (totop, cookiesum) {
+define(['toTop', 'cookiesum', 'login'], function (totop, cookiesum, login) {
     return {
         init: function () {
             // 头部HTML加载
@@ -7,6 +7,10 @@ define(['toTop', 'cookiesum'], function (totop, cookiesum) {
                     totop.init();
                 });
             });
+            //登录注册
+            $("#login").load("login.html", function () {
+                login.init();
+            })
             // 调用获取购物车数量的模块
             cookiesum.sum();
             // 当可视区加滚动条小于购物车下面导航的高度时,转为固定定位
@@ -22,16 +26,13 @@ define(['toTop', 'cookiesum'], function (totop, cookiesum) {
 
             function fix() {
                 if ($wrap.offset().top >= document.documentElement.clientHeight + $top) {
-
                     $bottomnav.css({
                         position: "fixed",
                         bottom: 0,
                     })
                 } else {
-
                     $bottomnav.css({
                         position: "static",
-
                     })
                 }
             }
@@ -52,7 +53,7 @@ define(['toTop', 'cookiesum'], function (totop, cookiesum) {
 
             function render(sid, num) {
                 $.ajax({
-                    url: "http://localhost/AIQIYI/php/getsid.php",
+                    url: "http://192.168.13.6/AIQIYI/php/getsid.php",
                     data: {
                         sid: sid
                     },
@@ -195,6 +196,20 @@ define(['toTop', 'cookiesum'], function (totop, cookiesum) {
                         path: "/"
                     });
 
+                }
+
+            })
+            //结算
+            $(".settle-accounts").on("click", function () {
+                if (parseFloat($(".totalmess .sumprice").html()) != 0.00) {
+                    if ($.cookie("username")) {
+                        alert("你将消费" + $(".totalmess .sumprice").html() + "元")
+                    } else {
+                        $(".shade").show();
+                        $('.logdis').show();
+                    }
+                } else {
+                    alert("请选择商品")
                 }
 
             })

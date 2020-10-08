@@ -12,6 +12,10 @@ define([], function () {
             }
             // 头部显示购物车数量
             $(".carli").find("span").html(count)
+            //存在用户名
+            if ($.cookie("username")) {
+                $(".head-top .left").html($.cookie("username") + ",欢迎来到爱奇艺商城")
+            }
         }
     }
 });

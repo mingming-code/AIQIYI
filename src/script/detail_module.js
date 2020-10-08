@@ -16,7 +16,7 @@ define(['cookiesum','jcookie'], function (cookiesum) {
                 sid = 1
             }
             $.ajax({
-                url: 'http://localhost/AIQIYI/php/getsid.php',
+                url: 'http://192.168.13.6/AIQIYI/php/getsid.php',
                 dataType: 'json',
                 data: {
                     sid: sid

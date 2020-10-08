@@ -12,4 +12,4 @@ if(isset($_GET["sid"])){
 
 
 // 接口地址
-//http://192.168.13.6/AIQIYI/php/getsid.php?sid=1
+//http://192.168.13.6/AIQIYI/php/getsid.php

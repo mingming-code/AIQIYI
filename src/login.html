@@ -9,18 +9,18 @@
     </div>
     <div class="login-main">
         <div>
-            <p>这是提示信息</p>
+            <p>请输入用户名</p>
             <label for="">用户名</label>
-            <input type="text" name=""  placeholder="请输入用户名">
+            <input type="text" name=""  value="请输入用户名" class="loginuser">
         </div>
         <div>
-            <p>这是提示信息</p>
+            <p>请输入密码</p>
             <label for="">密码</label>
-            <input type="text" name=""  placeholder="请输入密码">
+            <input type="text" name=""  value="请输入密码" class="loginpass">
         </div>
-        <button>登录</button>
+        <button class="loginbtn">登录</button>
     </div>
-    <div class="login-bottom"><a href="javascript:;">注册</a> </div>
+    <div class="login-bottom logbot"><a href="javascript:;">注册</a> </div>
 </div>
 <!-- 注册 -->
 <div class="log_in resdis">
@@ -29,19 +29,24 @@
         <a href="javascript:;" class="close">X</a>
     </div>
     <div class="login-main">
-        <div class="res">
-            <label for="">用户名</label>
-            <input type="text" name=""  placeholder="请输入用户名">
-        </div>
-        <div class="res">
-            <label for="">密码</label>
-            <input type="text" name=""  placeholder="请输入密码">
-        </div>
-        <div class="res">
-            <label for="">邮箱</label>
-            <input type="text" name=""  placeholder="请输入邮箱">
-        </div>
-        <button class="resbtn">注册</button>
+        <form action="http://192.168.13.6/AIQIYI/php/regist.php" method="post">
+            <div class="res">
+                <p>请输入用户名</p>
+                <label for="">用户名</label>
+                <input type="text" name="username"  placeholder="请输入用户名" class="resuser">
+            </div>
+            <div class="res">
+                <p>请输入密码</p>
+                <label for="">密码</label>
+                <input type="text" name="password"  placeholder="请输入密码" class="respass">
+            </div>
+            <div class="res">
+                <p>请输入邮箱</p>
+                <label for="">邮箱</label>
+                <input type="text" name="email" placeholder="请输入邮箱" class="resemail">
+            </div>
+            <input type="submit" value="注册" name="submit" class="resbtn">
+        </form>
     </div>
     <div class="login-bottom resbot"><a href="javascript:;">登录</a> </div>
 </div>

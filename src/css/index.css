@@ -64,13 +64,17 @@ a {
   /* 得到焦点提示信息 */
 }
 .log_in .login-main p {
-  color: #f94343;
+  color: #aaa;
   font-size: 12px;
   line-height: 80px;
-  text-align: center;
+  padding-left: 57px;
+  display: none;
 }
 .log_in .login-main .res {
   height: 58px;
+}
+.log_in .login-main .res p {
+  line-height: 50px;
 }
 .log_in .login-main div {
   height: 78px;
@@ -83,6 +87,7 @@ a {
   left: 57px;
   border: none;
   outline: none;
+  color: #aaa;
 }
 .log_in .login-main div label {
   position: absolute;
@@ -91,7 +96,7 @@ a {
   width: 50px;
   text-align: right;
 }
-.log_in .login-main button {
+.log_in .login-main button, .log_in .login-main .resbtn {
   height: 48px;
   line-height: 48px;
   width: 100%;

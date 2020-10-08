@@ -49,15 +49,20 @@
 
         /* 得到焦点提示信息 */
         p {
-            color: #f94343;
+            // color: #f94343;
+            color: #aaa;
             font-size: 12px;
             line-height: 80px;
-            text-align: center;
+            padding-left: 57px;
+            display: none;
         }
 
         //注册
         .res {
             height: 58px;
+            p{
+                line-height: 50px;
+            }
         }
 
         div {
@@ -71,6 +76,7 @@
                 left: 57px;
                 border: none;
                 outline: none;
+                color: #aaa;
             }
 
             label {
@@ -82,7 +88,7 @@
             }
         }
 
-        button {
+        button,.resbtn {
             height: 48px;
             line-height: 48px;
             width: 100%;
