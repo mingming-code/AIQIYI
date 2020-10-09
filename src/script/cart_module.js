@@ -50,7 +50,6 @@ define(['toTop', 'cookiesum', 'login'], function (totop, cookiesum, login) {
                 $(".main").hide()
             }
             let $inputs = null;
-
             function render(sid, num) {
                 $.ajax({
                     url: "http://192.168.13.6/AIQIYI/php/getsid.php",
@@ -129,7 +128,6 @@ define(['toTop', 'cookiesum', 'login'], function (totop, cookiesum, login) {
                     })
 
                     $(e.target).siblings().hover(function () {
-
                         $(this).css({
                             "background-position": "-180px -44px",
                         })
@@ -168,9 +166,10 @@ define(['toTop', 'cookiesum', 'login'], function (totop, cookiesum, login) {
                 }
                 calc();
                 // 删除列表
+                
                 if (e.target.className === "del") {
+                    console.log( $(e.target).parent().parent().parent().listid)
                     $(e.target).parent().parent().parent().remove()
-
                 }
             })
             //加减商品后重新计算总价和数量

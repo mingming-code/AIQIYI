@@ -202,7 +202,8 @@ header {
         padding: 10px;
         background: white;
         display: none;
-
+        z-index: 1;
+        
         img {
             float: left;
             width: 80px;

@@ -169,6 +169,7 @@ header .floatline {
   padding: 10px;
   background: white;
   display: none;
+  z-index: 1;
 }
 .head-top .attention img {
   float: left;

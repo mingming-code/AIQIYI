@@ -51,8 +51,19 @@ define(['sha1'], function () {
                         // 登录成功
                         $(".log_in").hide();
                         $(".shade").hide();
-                        $(".head-top .left").html($('.loginuser').val() + ",欢迎来到爱奇艺商城")
-                        $.cookie('username', $('.loginuser').val());
+                        $(".head-top .left").html($('.loginuser').val() + ",欢迎来到爱奇艺商城" + "<a href='index.html' class='exit' style='margin-left:20px'>退出</a>")
+                        $.cookie('username', $('.loginuser').val(), {
+                            expires: 7,
+                            path: "/"
+                        });
+                        //退出
+                        $(".exit").on("click", function () {
+                            console.log("点击了退出")
+                            $.cookie('username', "", {
+                                expires: -1,
+                                path: "/"
+                            });
+                        })
                     } else {
                         $('.loginuser').val("");
                         $('.loginpass').val("")
@@ -60,6 +71,7 @@ define(['sha1'], function () {
                     }
                 });
             });
+
             //注册
             let username = $(".resuser");
             let password = $(".respass");
@@ -71,7 +83,7 @@ define(['sha1'], function () {
             let $passwordflag = true;
             let $emailflag = true;
             username.blur(function () {
-                if(username.val() === ""){
+                if (username.val() === "") {
                     $p1.html("用户名不能为空");
                     $p1.css("color", "#f94343");
                     $usernameflag = false;
@@ -100,27 +112,27 @@ define(['sha1'], function () {
                     $p2.html("请输入密码");
                     $p2.css("color", "#aaa");
                     $passwordflag = true;
-                  
-                } else{
+
+                } else {
                     $p2.html("密码不能为空");
                     $p2.css("color", "#f94343");
                     $passwordflag = false;
                 }
             });
-           email.blur(function () {
+            email.blur(function () {
                 if (email.val() !== "") {
                     $p3.html("请输入邮箱");
                     $p3.css("color", "#aaa");
                     $passwordflag = true;
-                  
-                } else{
+
+                } else {
                     $p3.html("邮箱不能为空");
                     $p3.css("color", "#f94343");
                     $emailflag = false;
                 }
             });
-            $('form').on('submit', function() {
-                
+            $('form').on('submit', function () {
+
                 if (username.val() == '') {
                     $p1.html("用户名不能为空");
                     $p1.css("color", "#f94343").show();
@@ -136,9 +148,11 @@ define(['sha1'], function () {
                     $p3.css("color", "#f94343").show();
                     $emailflag = false;
                 }
-                if (!$usernameflag||!$passwordflag||$emailflag) {
+                if (!$usernameflag || !$passwordflag || !$emailflag) {
                     return false; //阻止提交
-                }             
+                }else{
+                   alert("注册成功,请登录")
+                }
             });
         }
     }

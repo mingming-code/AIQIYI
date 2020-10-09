@@ -46,7 +46,7 @@ a {
 .log_in .login-top {
   height: 50px;
   line-height: 50px;
-  background: url("http://www.iqiyipic.com/common/fix/v3-login/login-logo.png");
+  background: url("../img/login-logo.png");
   color: #5aa700;
   font-size: 14px;
   padding: 0 0 0 104px;
@@ -230,19 +230,19 @@ a {
   text-align: center;
 }
 .order-top li:nth-child(2) {
-  width: 360px;
+  width: 38%;
 }
 .order-top li:nth-child(3) {
-  width: 100px;
+  width: 10.5%;
 }
 .order-top li:nth-child(4) {
-  width: 140px;
+  width: 14.9%;
 }
 .order-top li:nth-child(5) {
-  width: 160px;
+  width: 17%;
 }
 .order-top li:nth-child(6) {
-  width: 90px;
+  width: 9.5%;
 }
 
 /* 商品列表 */
@@ -292,7 +292,7 @@ a {
   color: #3c3c3c;
   margin-left: 10px;
   display: inline-block;
-  width: 250px;
+  width: 26.5%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -307,7 +307,7 @@ a {
 }
 .goodslist .goodsdetail .primess {
   display: inline-block;
-  width: 100px;
+  width: 10.5%;
   text-align: center;
   margin-left: 30px;
 }
@@ -392,7 +392,7 @@ a {
   text-align: center;
   display: inline-block;
   vertical-align: top;
-  margin-left: 57px;
+  margin-left: 5%;
 }
 .goodslist .goodsdetail .operation a {
   color: #333;
